@@ -213,7 +213,13 @@ footer {
 @media only screen and (max-width: 480px) {
   .accueil {
     width: 100vw;
-    margin-top: calc(80vh - 300px);
+
+  }
+
+
+  .section-promos {
+
+    background: white;
   }
 
   .accueil h1 {
@@ -223,6 +229,7 @@ footer {
     text-align: center;
     width: 70%;
     margin: auto;
+    margin-top: 70%;
   }
 
   .accueil button {
