@@ -1,5 +1,6 @@
 
 
+// MENU BURGER
 let iconeMenuBurger = document.getElementById('burger-button');
 iconeMenuBurger.addEventListener("click", showOrHideBurgerMenu);
 
