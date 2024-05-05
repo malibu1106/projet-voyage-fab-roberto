@@ -1,71 +1,397 @@
 <video id="background-video" autoplay loop muted>
 
-  <source src="bg.mp4" type="video/mp4">
+  <source src="bg2.mp4" type="video/mp4">
 
 </video>
 
 <main>
   <section class="accueil">
     <h1>évadez-vous, découvrez, vivez.</h1>
-    <button class="recherche-voyage">
-      <img title="" src="img/search.svg" alt="">
-      Trouver mon voyage
-    </button>
+    <div id="recherche-voyage-mobile" class="recherche-voyage-mobile-fermee">
+      <div id="recherche-cachee">
+        <div id="close-icon"><img id="close-search-mobile-icon" src="img/close-research.png"></div>
+        <div class="conteneur-select-mobile">
+          <label for="regions">Régions</label>
+          <select id="regions" name="regions">
+            <option value="aaaa">aaaa</option>
+            <option value="bbbb">bbbb</option>
+            <option value="cccc">cccc</option>
+            <option value="dddd">dddd</option>
+            <option value="eeee">eeee</option>
+            <option value="ffff">ffff</option>
+            <option value="gggg">gggg</option>
+            <option value="hhhh">hhhh</option>
+            <option value="iiii">iiii</option>
+            <option value="jjjj">jjjj</option>
+            <option value="kkkk">kkkk</option>
+            <option value="llll">llll</option>
+            <option value="mmmm">mmmm</option>
+          </select>
+        </div>
+        <div class="conteneur-select-mobile">
+          <label for="envies">Envies</label>
+          <select id="envies" name="envies">
+            <option value="aaaa">aaaa</option>
+            <option value="bbbb">bbbb</option>
+            <option value="cccc">cccc</option>
+            <option value="dddd">dddd</option>
+            <option value="eeee">eeee</option>
+            <option value="ffff">ffff</option>
+            <option value="gggg">gggg</option>
+            <option value="hhhh">hhhh</option>
+            <option value="iiii">iiii</option>
+          </select>
+        </div>
+        <img id="search-mobile-icon" src="img/search.png">
+      </div>
+
+      <div id="trouver-mon-voyage">Trouver mon voyage</div>
+    </div>
   </section>
-  <section class="section-promos">
-    <h2 class="titre-section">Évadez-vous,</h2>
+  <div class="cut-blanc"></div>
+
+
+  <h2 class="titre-section">Évadez-vous,</h2>
+  <div class="cut-blanc">
     <h4 class="texte-section">Evadez-vous dans l'élégance intemporelle de la France, où la beauté des villes lumière
       se mêle au charme paisible des villages pittoresques.</h4>
+  </div>
+
+
+
+  <!-- PROMO GRAND -->
+  <section class="section-promos">
     <div class="conteneur-promo">
-      <article class="promo">
+      <article class="promo row">
         <figure>
-          <img title="promo1" src="" alt="promo1">
-          <figcaption></figcaption>
+          <img title="promo1" src="img/voyages/promos/corse.jpg" alt="promo1">
+          <figcaption>
+            <div class="titre-promo bold">Corse</div>
+            <div class="sous-titre-promo semibold">Plage de rêve</div>
+            <div class="conteneur-duree-prix">
+              <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 3 à 7jrs</div>
+              <div class="prix-promo">dès <span class="red bold prix">799€</span></div>
+            </div>
+          </figcaption>
         </figure>
       </article>
-      <article class="promo">
+      <article class="promo reverse">
         <figure>
-          <img title="promo2" src="" alt="promo2">
-          <figcaption></figcaption>
+          <img title="promo2" src="img/voyages/promos/grandest.jpg" alt="promo2">
+          <figcaption>
+            <div class="titre-promo bold">Grand Est</div>
+            <div class="sous-titre-promo semibold">Vibrations culturelles</div>
+            <div class="conteneur-duree-prix">
+              <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 2 à 15jrs</div>
+              <div class="prix-promo">dès <span class="red bold prix">359€</span></div>
+            </div>
+          </figcaption>
         </figure>
       </article>
-      <article class="promo">
+      <article class="promo row">
         <figure>
-          <img title="promo3" src="" alt="promo3">
-          <figcaption></figcaption>
+          <img title="promo3" src="img/voyages/promos/auvergne.jpg" alt="promo3">
+          <figcaption>
+            <div class="titre-promo bold">Auvergne</div>
+            <div class="sous-titre-promo semibold">Bien être absolu</div>
+            <div class="conteneur-duree-prix">
+              <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 7 à 15jrs</div>
+              <div class="prix-promo">dès <span class="red bold prix">979€</span></div>
+            </div>
+          </figcaption>
         </figure>
       </article>
-      <article class="promo">
+      <article class="promo reverse">
         <figure>
-          <img title="promo4" src="" alt="promo4">
-          <figcaption></figcaption>
-        </figure>
-      </article>
-      <article class="promo">
-        <figure>
-          <img title="promo5" src="" alt="promo5">
-          <figcaption></figcaption>
-        </figure>
-      </article>
-      <article class="promo">
-        <figure>
-          <img title="promo6" src="" alt="promo6">
-          <figcaption></figcaption>
+          <img title="promo4" src="img/voyages/promos/aquitaine.jpg" alt="promo4">
+          <figcaption>
+            <div class="titre-promo bold">Aquitaine</div>
+            <div class="sous-titre-promo semibold">Vibrations culturelles</div>
+            <div class="conteneur-duree-prix">
+              <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 2 à 15jrs</div>
+              <div class="prix-promo">dès <span class="red bold prix">429€</span></div>
+            </div>
+          </figcaption>
         </figure>
       </article>
     </div>
   </section>
-  <section class="section-regions">
-    <h2 class="titre-section">Découvrez,</h2>
+  <div class="cut-blanc"></div>
+
+
+  <!--REGIONS-->
+  <h2 class="titre-section">Découvrez,</h2>
+
+  <div class="cut-blanc">
     <h4 class="texte-section">Découvrez les trésors cachés de France, où chaque panorama dévoile un tableau vivant
       d'histoire, de culture et de beauté naturelle à couper le souffle.</h4>
-    <div class="conteneur-region">
+  </div>
+  <section id="section-regions" class="fade">
+    <div id="background-regions">
+      <h3 id="titre-region">l'Auvergne</h3>
 
+
+
+
+      <button id="prevRegion" onclick="prevRegion()">&#10094;</button>
+
+      <button id="nextRegion" onclick="nextRegion()">&#10095;</button>
+
+      <div class="prez-region"><img id="carte-region-img" src="img/regions/cartefr/carte-auvergne.png">
+
+        <div class="conteneur-infos-region">
+
+          <p id="texte-region">Laissez-vous séduire par la beauté brute des volcans endormis et des vastes étendues
+            verdoyantes de l'Auvergne, une région où la nature règne en maître.</p>
+        </div>
+      </div>
     </div>
+
+
   </section>
-  <section class="section-envies">
-    <h2 class="titre-section">Vivez.</h2>
+  <div class="cut-blanc"></div>
+  <h2 class="titre-section">Vivez.</h2>
+  <div class="cut-blanc">
     <h4 class="texte-section">Vivez une escapade mémorable où les paysages de France se révèlent être le décor parfait
       pour vos moments d'aventure et de détente.</h4>
+  </div>
+  <section class="section-voyages">
+    <div class="conteneur-voyages">
+
+      <div class="type-voyage">
+        <h3 class="titre-type-voyages">Plages de rêve</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/esterel.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Paca</h4>
+            <h5>Hôtel de l'Esterel</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/porto-vecchio-corse.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Corse</h4>
+            <h5>Porto-Vecchio</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+
+        <h3 class="titre-type-voyages">Harmonie naturelle</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/ombre-des-pins.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Pays de la Loire</h4>
+            <h5>Hôtel à l’ombre des pins </h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/hotel-loges-parc.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Grand Est</h4>
+            <h5>Hôtel les loges du Parc </h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/hotel-roca.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Centre Val-de-Loire</h4>
+            <h5>Hôtel Rocaminori</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Voyages Écoresponsables</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/domaine-de-pan.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Pays de la Loire</h4>
+            <h5>Le Domaine de Pan</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/tente-suspendue.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Normandie</h4>
+            <h5>Woody park tentes suspendues</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Le clos de Nathalie.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Île-de-France</h4>
+            <h5>Le clos de Nathalie</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/La ferme des ruats.jpeg">
+          <div class="conteneur-titre-voyage">
+            <h4>Bourgogne</h4>
+            <h5>La ferme des ruats</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Atteignez des sommets</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/Par des écrins.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>PACA</h4>
+            <h5>Le parc des Écrins</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Hôtel la perle des montagnes.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Occitanie</h4>
+            <h5>Hôtel la perle des montagnes</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Vibrations culturelles</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/La barbinais .jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Bretagne</h4>
+            <h5>Hotel le Barbinais</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Le Clos de l'Hermitage.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Centre Val-de-Loire</h4>
+            <h5>Le Clos de l'Hermitage</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Hôtel A la Vignette.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Grand Est</h4>
+            <h5>Hôtel à la Vignette</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/La Fantaisie.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Île-de-France</h4>
+            <h5>Hôtel La Fantaisie</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Domaine Aubazen.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Aquitaine</h4>
+            <h5>Domaine Aubazen</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Sport Extrême</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/Hôtel l'escale wissant.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Hauts-de-France</h4>
+            <h5>Hôtel l'escale Wissant</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Gîte Les falaises.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Occitanie</h4>
+            <h5>Gîte Les falaises</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Hôtel les ô d'Annecy.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Rhone-Alpes</h4>
+            <h5>Hôtel les ô d'Annecy</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Bien-être absolu</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/Cabane La Tour d'Auvergne 2.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Auvergne</h4>
+            <h5>Cabane La Tour d'Auvergne</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Hôte Ariane &Spa Mt St Michel.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Normandie</h4>
+            <h5>Hôtel Ariane</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Escapade gourmande</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/Le panoramique Hôtel.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Bourgogne</h4>
+            <h5>Le panoramique Hôtel</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Hôtel Les Bateliers Colmar.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Grand Est</h4>
+            <h5>Hôtel Les Bateliers Colmar</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Escale marine</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/erquy.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Bretagne</h4>
+            <h5>Erquy et ses alentours</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Hôtel Spa les corderies.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Hauts-de-France</h4>
+            <h5>Hôtel Spa les corderies</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-voyage">
+        <hr>
+        <h3 class="titre-type-voyages">Sentiers intrépides</h3>
+        <hr>
+        <div class="voyage"><img src="img/voyages/Lac Bastani.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Corse</h4>
+            <h5>10 jours de Trek</h5>
+          </div>
+        </div>
+        <div class="voyage"><img src="img/voyages/Auberge du bois de l'etang.jpg">
+          <div class="conteneur-titre-voyage">
+            <h4>Aquitaine</h4>
+            <h5>Auberge du bois de l'etang</h5>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
   </section>
 </main>
