@@ -111,4 +111,7 @@ function prevRegion() {
 function autoNextRegion() {
     setInterval(nextRegion, 2500);
 }
+
+
+
 autoNextRegion();

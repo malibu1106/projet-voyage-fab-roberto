@@ -16,6 +16,14 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
 img,
 picture,
 svg,
@@ -55,13 +63,14 @@ body {
 .cut-blanc {
   width: 100%;
   height: 12vh;
-  background: white;
-  /* box-shadow: 5px 5px 5px 5px white; */
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background: white;
 }
+
+
+
 
 /* COLORS */
 .red {
@@ -88,47 +97,59 @@ section {
   width: 100%;
 }
 
-.cut-blanc h4 {
-  color: #0088b6;
-  font-size: 18px;
-  text-align: center;
-  font-family: "Open Sans";
-}
 
-h2 {
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  text-shadow: 2px 2px 2px black, 4px 4px 2px black;
-  line-height: 30vh;
+.cut-transp {
   height: 30vh;
-  font-family: "Briem Hand";
-  font-size: 3.2em;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titre-section {
+  color: white;
+  font-family: "Roboto";
+  font-size: 2.5em;
+  line-height: 1.5em;
+}
+
+.texte-section {
+  color: white;
+  font-size: 1.2em;
+  line-height: 1em;
+  text-align: center;
+  font-family: "Poppins";
 
 }
+
+
 
 /*ACCUEIL Max480px */
 .accueil {
   width: 100vw;
-  max-height: 854px;
+  height: 454px;
 }
 
 #background-video {
-  height: 750px;
+  height: 854px;
 }
 
 
 .accueil h1 {
-  font-size: 2.2em;
+  font-size: 2.6em;
   color: white;
   text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 400;
   text-align: center;
-  width: 70%;
-  margin: auto;
-  margin-top: 120px;
-  text-shadow: 2px 2px 2px black, 4px 4px 2px black;
+  width: 80%;
+  margin: 300px auto 0;
+  text-shadow: 2px 2px 2px black;
+}
+
+#recherche-voyage-mobile {
+  font-family: "Lato";
 }
 
 .accueil .recherche-voyage-mobile-fermee {
@@ -136,7 +157,7 @@ h2 {
   height: 80px;
   width: 80%;
   margin: auto;
-  margin-top: 225px;
+  margin-top: 240px;
   margin-bottom: 50px;
   border-radius: 25px;
   background: rgba(217, 217, 217, 0.8);
@@ -152,7 +173,7 @@ h2 {
   transition: 0.2s;
   height: 270px;
   width: 80%;
-  margin: 35px auto 50px;
+  margin: 50px auto 50px;
   background: rgba(217, 217, 217, 0.8);
   border-radius: 25px;
   font-size: 1.2em;
@@ -217,6 +238,7 @@ h2 {
 /*SECTION PROMOS*/
 .section-promos {
   font-family: "Open Sans";
+  background: rgba(235, 233, 233, 1)
 }
 
 .section-promos article {
@@ -304,12 +326,14 @@ article.reverse figure img {
 .titre-promo {
   top: 25%;
   font-size: 1.7em;
+  font-family: "Roboto";
   color: #0088b6;
 }
 
 .sous-titre-promo {
   top: 50%;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  font-family: "Poppins";
 
 }
 
@@ -319,6 +343,7 @@ article.reverse figure img {
   bottom: 0;
   padding: 5px;
   font-size: 1.15em;
+  font-family: "Poppins";
 }
 
 .duree-promo {
@@ -339,6 +364,7 @@ article.reverse figure img {
 #section-regions {
   background: white;
 }
+
 
 #background-regions {
   background: url("img/regions/auvergne.jpg");
@@ -362,6 +388,12 @@ article.reverse figure img {
   cursor: pointer;
 }
 
+#clickZoneRegion {
+  width: 80%;
+  height: 46vh;
+  margin: auto;
+}
+
 #section-regions button:nth-of-type(2) {
   right: 0;
 }
@@ -373,7 +405,7 @@ article.reverse figure img {
 
 .prez-region {
   width: 100%;
-  height: 15vh;
+  height: 16vh;
   background: rgba(0, 0, 0, 0.5);
   border-top: solid white 1px;
   position: absolute;
@@ -400,30 +432,38 @@ p {
 #section-regions h3 {
   background: rgba(0, 0, 0, 0.5);
   border-bottom: solid white 1px;
-  font-size: 35px;
-  padding: 10px;
+  font-size: 1.8em;
   text-align: center;
   border-radius: 10px 10px 0 0;
+  font-family: "Roboto";
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #section-regions p {
-  font-size: 1.15em;
+  font-size: 1em;
+  line-height: 1em;
   text-align: center;
   padding: 3px;
+  font-family: "Poppins";
 }
 
 
 /* ENVIES */
 .section-voyages {
+  background: rgba(235, 233, 233, 1);
   padding: 25px 0px;
   height: auto;
 }
 
 .section-voyages h3 {
   font-size: 2.3em;
-  color: white;
+  color: #0088b6;
   text-align: center;
   margin: auto;
+  font-family: "Lato";
 }
 
 .conteneur-voyages {
@@ -473,16 +513,24 @@ hr {
 .conteneur-titre-voyage {
   text-align: center;
   margin: 10px auto;
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+
 }
 
 .conteneur-titre-voyage h4 {
-  font-size: 2em;
+  font-size: 1.65em;
   color: #0088b6;
 }
 
 .conteneur-titre-voyage h5 {
-  font-size: 1.55em;
+  font-size: 1.10em;
+  line-height: 1em;
   color: black;
+  font-family: "Poppins";
 }
 
 
@@ -519,6 +567,7 @@ header {
   color: white;
   top: 0;
   z-index: 1;
+  font-family: "Roboto";
 
 }
 
@@ -598,6 +647,7 @@ footer {
   background: white;
   display: flex;
   flex-direction: column;
+  font-family: "Roboto";
 }
 
 .article-footer {
@@ -641,7 +691,7 @@ footer {
     text-align: center;
     line-height: 30px;
     font-size: 1.1em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Roboto";
     text-shadow: 2px 2px 2px black, 4px 4px 2px black, -2px -2px 2px black;
   }
 
