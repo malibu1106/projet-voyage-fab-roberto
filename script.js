@@ -70,6 +70,7 @@ let texteRegions = ["Laissez-vous séduire par la beauté brute des volcans endo
 let zoneCarteRegions = document.getElementById('carte-region-img');
 let zoneTitreRegion = document.getElementById('titre-region');
 let zoneTexteRegion = document.getElementById('texte-region');
+let lienRegion = document.getElementById('lienRegion');
 
 
 
@@ -88,6 +89,7 @@ function nextRegion() {
     zoneCarteRegions.src = carteRegionBackground;
     zoneTitreRegion.innerHTML = titreRegions[backgroundIndex];
     zoneTexteRegion.innerHTML = texteRegions[backgroundIndex];
+    lienRegion.href = `index.php?region=${regions[backgroundIndex]}`;
 }
 
 function prevRegion() {

@@ -369,7 +369,8 @@ article.reverse figure img {
 #background-regions {
   background: url("img/regions/auvergne.jpg");
   background-size: cover;
-  background-position: 50%;
+  background-position: 50% 50%;
+  max-width: calc(1.77*70vh);
   transition: 1s;
   position: relative;
   height: 70vh;
@@ -494,6 +495,8 @@ hr {
 
 .voyage img {
   height: 100px;
+  width: 100px;
+  object-fit: cover;
 }
 
 .type-voyage .voyage:nth-child(odd) img {
