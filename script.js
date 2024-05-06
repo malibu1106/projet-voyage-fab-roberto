@@ -1,3 +1,19 @@
+// PAUSE VIDEO & LAUNCH REGION SLIDE
+window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition >= 1000) {
+        document.getElementById('background-video').pause();
+        callAutoNextRegion();
+    }
+    else { document.getElementById('background-video').play(); }
+});
+
+function callAutoNextRegion() {
+    autoNextRegion();
+    callAutoNextRegion = function () { };
+
+}
+
 // MENU BURGER
 let iconeMenuBurger = document.getElementById('burger-button');
 iconeMenuBurger.addEventListener("click", showOrHideBurgerMenu);
@@ -71,49 +87,41 @@ let zoneCarteRegions = document.getElementById('carte-region-img');
 let zoneTitreRegion = document.getElementById('titre-region');
 let zoneTexteRegion = document.getElementById('texte-region');
 let lienRegion = document.getElementById('lienRegion');
-
-
+let autoRegionInterval; // Déclarez une variable globale pour stocker l'ID de l'intervalle
 
 function nextRegion() {
-
     if (backgroundIndex < regions.length - 1) {
         backgroundIndex++;
-    }
-    else {
+    } else {
         backgroundIndex = 0;
     }
     let regionBackground = `url("img/regions/${regions[backgroundIndex]}.jpg")`;
     let carteRegionBackground = `img/regions/cartefr/carte-${regions[backgroundIndex]}.png`;
-
     sectionRegion.style.backgroundImage = regionBackground;
     zoneCarteRegions.src = carteRegionBackground;
     zoneTitreRegion.innerHTML = titreRegions[backgroundIndex];
     zoneTexteRegion.innerHTML = texteRegions[backgroundIndex];
     lienRegion.href = `index.php?region=${regions[backgroundIndex]}`;
+    clearInterval(autoRegionInterval);
+    autoRegionInterval = setInterval(nextRegion, 4000);
 }
 
 function prevRegion() {
-
     if (backgroundIndex == 0) {
         backgroundIndex = 12;
-    }
-    else {
+    } else {
         backgroundIndex--;
     }
-
     let regionBackground = `url("img/regions/${regions[backgroundIndex]}.jpg")`;
     let carteRegionBackground = `img/regions/cartefr/carte-${regions[backgroundIndex]}.png`;
     sectionRegion.style.backgroundImage = regionBackground;
     zoneCarteRegions.src = carteRegionBackground;
     zoneTitreRegion.innerHTML = titreRegions[backgroundIndex];
     zoneTexteRegion.innerHTML = texteRegions[backgroundIndex];
+    clearInterval(autoRegionInterval);
+    autoRegionInterval = setInterval(nextRegion, 4000);
 }
-
 
 function autoNextRegion() {
-    setInterval(nextRegion, 2500);
+    autoRegionInterval = setInterval(nextRegion, 4000);
 }
-
-
-
-autoNextRegion();

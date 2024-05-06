@@ -18,6 +18,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:visited {
@@ -381,18 +382,24 @@ article.reverse figure img {
 
 #section-regions button {
   position: absolute;
-  bottom: 50%;
   font-size: 50px;
+  width: 10%;
+  height: 46vh;
   color: white;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-#clickZoneRegion {
-  width: 80%;
+.clickableRegion {
   height: 46vh;
+  width: 80%;
+  left: 0;
+  top: 8vh;
+  right: 0;
+  left: 0;
   margin: auto;
+  position: absolute;
 }
 
 #section-regions button:nth-of-type(2) {
@@ -441,6 +448,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  s
 }
 
 #section-regions p {
