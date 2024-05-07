@@ -559,7 +559,45 @@ hr {
   background: rgba(235, 233, 233, 1);
 }
 
+/*--------DETAIL_VOYAGE-------*/
 
+
+.titre-voyage-details {
+  font-size: 90px;
+  text-align: center;
+  border: 2px solid blue;
+}
+
+.conteneur-photo {
+  height: 800px;
+
+}
+
+.conteneur-photo article {
+  height: auto;
+
+}
+
+.conteneur-photo figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.conteneur-figcaption {
+
+  border-radius: ;
+  height: 600px;
+  width: 400px;
+  padding: 30px;
+
+  background-color: orange;
+}
+
+.photo-voyage {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 
 
