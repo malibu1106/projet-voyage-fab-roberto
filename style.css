@@ -168,12 +168,14 @@ section {
   position: relative;
   font-size: 1.2em;
   cursor: pointer;
+  max-width: 400px;
 }
 
 .accueil .recherche-voyage-mobile-ouverte {
   transition: 0.2s;
   height: 270px;
   width: 80%;
+  max-width: 800px;
   margin: 50px auto 50px;
   background: rgba(217, 217, 217, 0.8);
   border-radius: 25px;
@@ -239,7 +241,7 @@ section {
 /*SECTION PROMOS*/
 .section-promos {
   font-family: "Open Sans";
-  background: rgba(235, 233, 233, 1)
+  background: rgba(235, 233, 233, 1);
 }
 
 .section-promos article {
@@ -248,12 +250,15 @@ section {
 
 .conteneur-promo {
   width: 90%;
-  height: 940px;
+  max-width: 500px;
   margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 25px;
   justify-content: center;
+
 
 }
 
@@ -448,7 +453,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  s
 }
 
 #section-regions p {
@@ -486,6 +490,8 @@ p {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: auto;
+
 }
 
 hr {
@@ -493,7 +499,7 @@ hr {
 }
 
 .voyage {
-  width: 100%;
+  width: 400px;
   height: 100px;
   margin: 10px auto;
   background: white;
@@ -546,6 +552,12 @@ hr {
 
 
 
+/* SECTION DETAIL D'UN VOYAGE*/
+.voyage-details {
+  width: 95%;
+  margin: auto;
+  background: rgba(235, 233, 233, 1);
+}
 
 
 
@@ -676,14 +688,6 @@ footer {
 
 
 
-/* REHIDE MENU SI OUVERT ET RESIZE DE LA PAGE */
-
-@media only screen and (min-width: 768px) {
-  #menu-petit {
-    height: 0px;
-    visibility: hidden;
-  }
-}
 
 /* CSS TABLET */
 
@@ -705,7 +709,65 @@ footer {
     font-family: "Roboto";
     text-shadow: 2px 2px 2px black, 4px 4px 2px black, -2px -2px 2px black;
   }
+}
 
+
+/* + CSS + 768px */
+/* REHIDE MENU SI OUVERT ET RESIZE DE LA PAGE */
+@media only screen and (min-width: 768px) {
+  #menu-petit {
+    height: 0px;
+    visibility: hidden;
+  }
+
+  /*PROMOS*/
+
+  .conteneur-promo {
+
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+
+  article.promo {
+
+    max-width: 500px;
+    min-width: 400px;
+  }
+
+
+  /* VOYAGES */
+  .conteneur-voyages {
+    width: 95%;
+    max-width: 1500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .type-voyage {
+    align-items: flex-start;
+    margin-top: 20px;
+
+  }
+
+  /* DETAIL VOYAGES */
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 
