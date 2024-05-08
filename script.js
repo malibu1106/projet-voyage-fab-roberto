@@ -22,20 +22,35 @@ let menuBurger = document.getElementById('menu-petit');
 
 function showOrHideBurgerMenu() {
     document.body.className = "";
+    if (document.getElementById('zone-login').style.display !== "block") {
 
-    if (menuBurger.classList == "menu-petit-cache") {
-        menuBurger.classList.replace("menu-petit-cache", "menu-petit-visible");
-        iconeMenuBurger.style.transform = "rotate(90deg)";
+        if (menuBurger.classList == "menu-petit-cache") {
+            menuBurger.classList.replace("menu-petit-cache", "menu-petit-visible");
+            iconeMenuBurger.style.transform = "rotate(90deg)";
 
+
+        }
+        else {
+
+            menuBurger.classList.replace("menu-petit-visible", "menu-petit-cache");
+            iconeMenuBurger.style.transform = "rotate(0deg)";
+
+        }
 
     }
-    else {
+}
+// LOGIN ZONE
 
+function showOrHideLoginZone() {
+    if (document.getElementById('zone-login').style.display == "block") {
+        document.getElementById('zone-login').style.display = "none";
+    }
+    else { document.getElementById('zone-login').style.display = "block" }
+
+    if (menuBurger.classList == "menu-petit-visible") {
         menuBurger.classList.replace("menu-petit-visible", "menu-petit-cache");
         iconeMenuBurger.style.transform = "rotate(0deg)";
-
     }
-
 }
 
 // RECHERCHE MASQUEE

@@ -11,9 +11,9 @@
 
         <nav class="menu-grand">
             <ul>
-                <li>Connexion</li>
-                <li>L'agence</li>
-                <li>Mon voyage</li>
+                <li><span onclick="showOrHideLoginZone()" id="btn-login">Connexion</span></li>
+                <li><a href="#ancre-voyages">Nos voyages</a></li>
+                <li><a href="#ancre-contact">Contact</a></li>
                 <li id="langage"></li>
             </ul>
         </nav>
@@ -22,9 +22,9 @@
     </div>
     <nav id="menu-petit" class="menu-petit-cache">
         <ul>
-            <li>Connexion</li>
-            <li>L'agence</li>
-            <li>Mon voyage</li>
+            <li><span onclick="showOrHideLoginZone()" id="btn-login-petit">Connexion</span></li>
+            <li><a href="#ancre-voyages">Nos voyages</a></li>
+            <li><a href="#ancre-contact">Contact</a></li>
             <center>
                 <li id="langage"></li>
             </center>
@@ -32,3 +32,15 @@
     </nav>
 
 </header>
+<div id="zone-login">
+    <div class="login-form">
+        <form action="#" method="post">
+            <input placeholder="Adresse email" type="emaillogin" id="emaillogin" name="emaillogin" required>
+            <input placeholder="Mot de passe" type="password" id="password" name="password" required>
+
+            <input type="submit" value="Se connecter">
+            <img onclick="showOrHideLoginZone()" src="img/close-login.svg">
+        </form>
+
+    </div>
+</div>

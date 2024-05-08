@@ -121,7 +121,55 @@ section {
   line-height: 1em;
   text-align: center;
   font-family: "Poppins";
+}
 
+#zone-login {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 100px;
+  z-index: 100;
+  display: none;
+}
+
+.login-form {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 150;
+}
+
+.login-form input {
+  width: 100%;
+  height: 40px;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  background: white;
+}
+
+.login-form input:hover {
+  scale: 1.05;
+  transition: 0.2s;
+  box-shadow: 1px 1px 2px 1px #0088b6;
+}
+
+#btn-login,
+#btn-login-petit,
+#zone-login img {
+  cursor: pointer;
+}
+
+#zone-login img {
+  width: 50%;
+  margin: auto;
+  z-index: 160;
 }
 
 
@@ -570,6 +618,12 @@ hr {
 }
 
 /*--------DETAIL_VOYAGE-------*/
+/***** DEBUT CSS FAB **********/
+/***** DEBUT CSS FAB **********/
+/***** DEBUT CSS FAB **********/
+/***** DEBUT CSS FAB **********/
+
+
 
 
 .titre-voyage-details {
@@ -596,7 +650,6 @@ hr {
 
 .conteneur-figcaption {
 
-  border-radius: ;
   height: 600px;
   width: 400px;
   padding: 30px;
@@ -608,6 +661,204 @@ hr {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+
+/***** FIN CSS FAB **********/
+/***** FIN CSS FAB **********/
+/***** FIN CSS FAB **********/
+/***** FIN CSS FAB **********/
+/***** FIN CSS FAB **********/
+
+
+
+/* CSS AVIS */
+
+.section-avis {
+  width: 100%;
+  background: rgba(235, 233, 233, 1);
+  padding: 50px 0px;
+}
+
+.conteneur-avis {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+article.avis {
+  width: 450px;
+  height: 180px;
+  margin: 10px 10px;
+  box-sizing: content-box;
+  background: white;
+  border-radius: 10px;
+}
+
+.avis figure {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avis figcaption {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.avis figcaption .titre-avis,
+.texte-avis {
+  color: #0088b6;
+}
+
+.avis figcaption .titre-avis {
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 5px;
+}
+
+.avis figcaption .texte-avis {
+  font-size: 1em;
+  line-height: 1em;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  font-weight: 600;
+}
+
+.avis .note-avis {
+  position: absolute;
+  width: 125px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+}
+
+.avis .nom-avis {
+  position: absolute;
+  bottom: 35px;
+  font-style: italic;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+article.avis img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+article.avis .note-avis img {
+  width: 25px;
+}
+
+/* CONTACT */
+section.contact {
+  background: rgba(235, 233, 233, 1);
+  padding: 50px 0px;
+}
+
+.conteneur-contact {
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conteneur-contact-gauche {
+  width: 100%;
+  display: flex;
+}
+
+.conteneur-contact-gauche form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+  line-height: 1.1em;
+}
+
+.conteneur-contact-gauche form input,
+textarea,
+select {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  background: white;
+}
+
+.conteneur-contact-gauche form input:hover,
+textarea:hover,
+select:hover {
+  scale: 1.05;
+  transition: 0.2s;
+  box-shadow: 1px 1px 2px 1px #0088b6;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+.conteneur-contact-gauche form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-gauche,
+.form-droite {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-droite {
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.form-gauche {
+  justify-content: space-between;
+}
+
+.conteneur-contact-droite {
+  width: 100%;
+  padding: 20px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.conteneur-contact-droite p {
+  color: #0088b6;
+  padding: 10px;
+}
+
+.conteneur-contact-droite .type-contact {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.conteneur-contact-droite .infos-contact {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+
+
+
+
 
 
 
@@ -801,6 +1052,22 @@ footer {
   }
 
   /* DETAIL VOYAGES */
+
+
+  /* CONTACT */
+
+  .conteneur-contact-gauche form {
+    flex-direction: row;
+  }
+
+  .form-droite {
+    margin-top: 0;
+  }
+
+  .form-gauche,
+  .form-droite {
+    width: 40%;
+  }
 
 
 
