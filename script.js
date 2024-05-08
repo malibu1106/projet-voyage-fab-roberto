@@ -125,3 +125,119 @@ function prevRegion() {
 function autoNextRegion() {
     autoRegionInterval = setInterval(nextRegion, 4000);
 }
+
+
+// RECHERCHE FILTREE
+
+document.getElementById('regions').addEventListener('change', function () {
+    let selectedRegion = this.value;
+    let enviesDropdown = document.getElementById('envies');
+    let enviesOptions = enviesDropdown.options;
+
+
+    for (let i = 0; i < enviesOptions.length; i++) {
+        let envie = enviesOptions[i];
+        let envieValue = envie.value;
+
+
+        envie.style.display = 'none';
+
+
+        if (isEnvieAvailableInRegion(envieValue, selectedRegion)) {
+            envie.style.display = 'block';
+        }
+    }
+    pushResearchLink();
+});
+
+let enviesDisponiblesParRegion = {
+    'allregions': ['allenvies', 'sommets', 'bienetre', 'marine', 'gourmande', 'harmonie', 'plage', 'sentiers', 'sport', 'culture', 'eco'],
+    'auvergne': ['allenvies', 'bienetre', 'sport'],
+    'bourgogne': ['allenvies', 'gourmande', 'eco'],
+    'bretagne': ['allenvies', 'marine', 'culture'],
+    'centre': ['allenvies', 'harmonie', 'culture'],
+    'corse': ['allenvies', 'plage', 'sentiers'],
+    'grandest': ['allenvies', 'gourmande', 'harmonie', 'culture'],
+    'hdf': ['allenvies', 'marine', 'sport'],
+    'idf': ['allenvies', 'culture', 'eco'],
+    'normandie': ['allenvies', 'bienetre', 'eco'],
+    'aquitaine': ['allenvies', 'sentiers', 'culture'],
+    'occitanie': ['allenvies', 'sommets', 'sport'],
+    'loire': ['allenvies', 'harmonie', 'eco'],
+    'paca': ['allenvies', 'sommets', 'plage']
+};
+
+
+function isEnvieAvailableInRegion(envie, region) {
+
+    return enviesDisponiblesParRegion[region].includes(envie);
+
+}
+
+document.getElementById('envies').addEventListener('change', function () {
+    let selectedEnvie = this.value;
+    let regionsDropdown = document.getElementById('regions');
+    let regionsOptions = regionsDropdown.options;
+
+
+    for (let i = 0; i < regionsOptions.length; i++) {
+        let region = regionsOptions[i];
+        let regionValue = region.value;
+
+
+        region.style.display = 'none';
+
+
+        if (isRegionAvailableForEnvie(selectedEnvie, regionValue)) {
+            region.style.display = 'block';
+        }
+    }
+
+}
+);
+
+function isRegionAvailableForEnvie(envie, region) {
+    let regionsDisponiblesParEnvie = {};
+
+    for (const [regionKey, envies] of Object.entries(enviesDisponiblesParRegion)) {
+        if (envies.includes(envie)) {
+            regionsDisponiblesParEnvie[regionKey] = true;
+        }
+    }
+
+    // Mettre à jour les options des régions et appeler pushResearchLink une seule fois
+    pushResearchLink();
+
+    return regionsDisponiblesParEnvie[region];
+}
+
+function pushResearchLink() {
+    document.getElementById('search-mobile-icon').addEventListener('click', function () {
+
+        let selectedRegion = document.getElementById('regions').value;
+        let selectedEnvie = document.getElementById('envies').value;
+        let lien;
+
+        if (selectedEnvie === "allenvies" && selectedRegion === "allregions") {
+            alert("Selectionnez au moins une région ou une envie")
+        }
+        else if (selectedEnvie === "allenvies" && selectedRegion != "allregions") {
+            lien = 'index.php?region=' + selectedRegion;
+            document.getElementById('researchLink').href = lien;
+        }
+        else if (selectedEnvie != "allenvies" && selectedRegion === "allregions") {
+            lien = 'index.php?envie=' + selectedEnvie;
+            document.getElementById('researchLink').href = lien;
+        }
+        else if (selectedEnvie != "allenvies" && selectedRegion != "allregions") {
+            lien = 'index.php?region=' + selectedRegion + '&envie=' + selectedEnvie;
+            document.getElementById('researchLink').href = lien;
+        }
+        else { alert('Erreur dans la recherche') }
+
+
+    });
+
+}
+
+pushResearchLink();
