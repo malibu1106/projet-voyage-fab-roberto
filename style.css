@@ -152,6 +152,7 @@ section {
   border-radius: 10px;
   border: none;
   background: white;
+  z-index: 200;
 }
 
 .login-form input:hover {
@@ -167,9 +168,9 @@ section {
 }
 
 #zone-login img {
-  width: 50%;
+  width: 50px;
   margin: auto;
-  z-index: 160;
+  z-index: 500;
 }
 
 
@@ -330,7 +331,7 @@ article.promo {
   display: flex;
 }
 
-.row::before {
+article.promo::before {
   content: "";
   position: absolute;
   width: 70px;
@@ -341,7 +342,18 @@ article.promo {
   background-size: cover;
 }
 
-.reverse::before {
+/* article.promo:nth-child(2n)::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -15px;
+  left: -15px;
+  background: url("img/voyages/promos/30percent.png");
+  background-size: cover;
+} */
+
+.conteneur-promo>a:nth-child(2n) .promo::before {
   content: "";
   position: absolute;
   width: 70px;
@@ -351,6 +363,19 @@ article.promo {
   background: url("img/voyages/promos/30percent.png");
   background-size: cover;
 }
+
+.conteneur-promo>a:nth-child(2n) figure {
+  flex-direction: row-reverse;
+}
+
+.conteneur-promo>a:nth-child(2n) figure img {
+  border-radius: 0px 8px 8px 0px;
+}
+
+
+
+
+
 
 .section-promos figure {
   display: flex;
@@ -370,13 +395,9 @@ article.promo {
   position: relative;
 }
 
-article.reverse figure {
-  flex-direction: row-reverse;
-}
 
-article.reverse figure img {
-  border-radius: 0px 8px 8px 0px;
-}
+
+
 
 .titre-promo,
 .sous-titre-promo,

@@ -1,24 +1,24 @@
 <?php
 $regionSet = false;
 $envieSet = false;
-$region = ''; 
-$envie = ''; 
-if(isset($_GET['region'])) {
+$region = '';
+$envie = '';
+if (isset($_GET['region'])) {
     $region = $_GET['region'];
     $regionSet = true;
 }
-if(isset($_GET['envie'])) {
+if (isset($_GET['envie'])) {
     $envie = $_GET['envie'];
     $envieSet = true;
 }
 ?>
 
-<?php include 'prebody.html'?>
-<?php include 'header.html'?>
+<?php include 'prebody.html' ?>
+<?php include 'header.html' ?>
 
-<?php 
+<?php
 if ($regionSet == true && $envieSet == true) {
-    include ("pages/$region$envie.php");
+    include("pages/$region$envie.php");
 } else if ($regionSet == true) {
     foreach (glob("pages/*$region*.php") as $filename) {
         if (basename($filename) !== "$region.php") {
@@ -32,9 +32,9 @@ if ($regionSet == true && $envieSet == true) {
         }
     }
 } else {
-    include 'accueil.html';
+    include 'accueil.php';
 }
 ?>
 
-<?php include 'footer.html'?>
-<?php include 'postbody.html'?>
+<?php include 'footer.html' ?>
+<?php include 'postbody.html' ?>
