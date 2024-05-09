@@ -1,6 +1,7 @@
 <?php
 $regionSet = false;
 $envieSet = false;
+$actionSet = false;
 $region = '';
 $envie = '';
 if (isset($_GET['region'])) {
@@ -10,6 +11,10 @@ if (isset($_GET['region'])) {
 if (isset($_GET['envie'])) {
     $envie = $_GET['envie'];
     $envieSet = true;
+}
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];
+    $actionSet = true;
 }
 ?>
 
@@ -31,10 +36,12 @@ if ($regionSet == true && $envieSet == true) {
             include $filename;
         }
     }
+} else if ($actionSet == true) {
+    include 'traitementpromo.php';
 } else {
     include 'accueil.php';
 }
 ?>
 
-<?php include 'footer.html' ?>
+<?php include 'footer.php' ?>
 <?php include 'postbody.html' ?>

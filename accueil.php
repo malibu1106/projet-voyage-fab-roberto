@@ -13,36 +13,35 @@
                 <div class="conteneur-select-mobile">
                     <label for="regions">Régions</label>
                     <select id="regions" name="regions">
-                        <option class="researchOption" value="allregions">Toutes les régions</option>
-                        <option class="researchOption" value="auvergne">Auvergne-Rhône-Alpes</option>
-                        <option class="researchOption" value="bourgogne">Bourgogne-Franche-Comté</option>
-                        <option class="researchOption" value="bretagne">Bretagne</option>
-                        <option class="researchOption" value="centre">Centre-Val de Loire</option>
-                        <option class="researchOption" value="corse">Corse</option>
-                        <option class="researchOption" value="grandest">Grand Est</option>
-                        <option class="researchOption" value="hdf">Hauts-de-France</option>
-                        <option class="researchOption" value="idf">Île-de-France</option>
-                        <option class="researchOption" value="normandie">Normandie</option>
-                        <option class="researchOption" value="aquitaine">Nouvelle-Aquitaine</option>
-                        <option class="researchOption" value="occitanie">Occitanie</option>
-                        <option class="researchOption" value="loire">Pays de la Loire</option>
-                        <option class="researchOption" value="paca">Provence-Alpes-Côte d'Azur</option>
+
+                        <option class="researchOption" value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
+                        <option class="researchOption" value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+                        <option class="researchOption" value="Bretagne">Bretagne</option>
+                        <option class="researchOption" value="Centre-Val de Loire">Centre-Val de Loire</option>
+                        <option class="researchOption" value="Corse">Corse</option>
+                        <option class="researchOption" value="Grand Est">Grand Est</option>
+                        <option class="researchOption" value="Hauts-de-France">Hauts-de-France</option>
+                        <option class="researchOption" value="Île-de-France">Île-de-France</option>
+                        <option class="researchOption" value="Normandie">Normandie</option>
+                        <option class="researchOption" value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+                        <option class="researchOption" value="Occitanie">Occitanie</option>
+                        <option class="researchOption" value="Pays de la Loire">Pays de la Loire</option>
+                        <option class="researchOption" value="Paca">Provence-Alpes-Côte d'Azur</option>
                     </select>
                 </div>
                 <div class="conteneur-select-mobile">
                     <label for="envies">Envies</label>
                     <select id="envies" name="envies">
-                        <option class="researchOption" value="allenvies">Toutes les envies</option>
-                        <option class="researchOption" value="sommets">Atteignez des sommets</option>
-                        <option class="researchOption" value="bienetre">Bien-être absolu</option>
-                        <option class="researchOption" value="marine">Escale marine</option>
-                        <option class="researchOption" value="gourmande">Escapade gourmande</option>
-                        <option class="researchOption" value="harmonie">Harmonie naturelle</option>
-                        <option class="researchOption" value="plage">Plages de rêve</option>
-                        <option class="researchOption" value="sentiers">Sentiers intrépides</option>
-                        <option class="researchOption" value="sport">Sport Extrême</option>
-                        <option class="researchOption" value="culture">Vibrations culturelles</option>
-                        <option class="researchOption" value="eco">Voyages Écoresponsables</option>
+                        <option class="researchOption" value="Atteignez des sommets">Atteignez des sommets</option>
+                        <option class="researchOption" value="Bien-être absolu">Bien-être absolu</option>
+                        <option class="researchOption" value="Escale marine">Escale marine</option>
+                        <option class="researchOption" value="Escapade gourmande">Escapade gourmande</option>
+                        <option class="researchOption" value="Harmonie naturelle">Harmonie naturelle</option>
+                        <option class="researchOption" value="Plages de rêve">Plages de rêve</option>
+                        <option class="researchOption" value="Sentiers intrépides">Sentiers intrépides</option>
+                        <option class="researchOption" value="Sport Extrême">Sport Extrême</option>
+                        <option class="researchOption" value="Vibrations culturelles">Vibrations culturelles</option>
+                        <option class="researchOption" value="Voyages Écoresponsables">Voyages Écoresponsables</option>
                     </select>
                 </div>
                 <a id="researchLink" href="#"><img id="search-mobile-icon" src="img/search.png"></a>

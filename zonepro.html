@@ -1,0 +1,47 @@
+<div id="zone-pro">
+    <form action="index.php?action=traitementpromo" method="post" enctype="multipart/form-data">
+        <label for="image">Image :</label>
+        <input type="file" name="image" id="image" required><br>
+
+        <label for="region">Région :</label>
+        <select name="region" id="region" required>
+            <option class="researchOption" value="bourgogne">Bourgogne-Franche-Comté</option>
+            <option value="bretagne">Bretagne</option>
+            <option value="centre">Centre-Val de Loire</option>
+            <option value="corse">Corse</option>
+            <option value="grandest">Grand Est</option>
+            <option value="hdf">Hauts-de-France</option>
+            <option value="idf">Île-de-France</option>
+            <option value="normandie">Normandie</option>
+            <option value="aquitaine">Nouvelle-Aquitaine</option>
+            <option value="occitanie">Occitanie</option>
+            <option value="loire">Pays de la Loire</option>
+            <option value="paca">Provence-Alpes-Côte d'Azur</option>
+            <!-- Ajoute d'autres options pour les différentes régions -->
+        </select><br>
+
+        <label for="envie">Envie :</label>
+        <select name="envie" id="envie" required>
+            <option value="allenvies">Toutes les envies</option>
+            <option value="sommets">Atteignez des sommets</option>
+            <option value="bienetre">Bien-être absolu</option>
+            <option value="marine">Escale marine</option>
+            <option value="gourmande">Escapade gourmande</option>
+            <option value="harmonie">Harmonie naturelle</option>
+            <option value="plage">Plages de rêve</option>
+            <option value="sentiers">Sentiers intrépides</option>
+            <option value="sport">Sport Extrême</option>
+            <option value="culture">Vibrations culturelles</option>
+            <option value="eco">Voyages Écoresponsables</option>
+        </select><br>
+
+        <label for="duree">Durée du voyage :</label>
+        <input type="text" name="duree" id="duree" required><br>
+
+        <label for="prix">Prix du voyage :</label>
+        <input type="text" name="prix" id="prix" required><br>
+
+        <button type="submit">Ajouter Promotion</button>
+        <img onclick="showOrHideProZone()" src="img/close-research.png">
+    </form>
+</div>

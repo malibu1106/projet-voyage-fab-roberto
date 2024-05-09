@@ -53,6 +53,16 @@ function showOrHideLoginZone() {
     }
 }
 
+// PRO ZONE
+
+function showOrHideProZone() {
+    if (document.getElementById('zone-pro').style.display == "block") {
+        document.getElementById('zone-pro').style.display = "none";
+    }
+    else { document.getElementById('zone-pro').style.display = "block" }
+
+}
+
 // RECHERCHE MASQUEE
 let rechercheMobile = document.getElementById('recherche-voyage-mobile');
 let rechercheMobileCachee = document.getElementById('recherche-cachee');
