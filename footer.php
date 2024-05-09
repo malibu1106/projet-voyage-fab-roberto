@@ -1,4 +1,4 @@
-<?php include 'zonepro.html' ?>
+<?php include 'zonepro.php' ?>
 
 
 <footer>

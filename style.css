@@ -178,10 +178,10 @@ section {
 /* ZONE PRO */
 #zone-pro {
   width: 100vw;
-  height: calc(100vh - 100px);
-  background: rgba(0, 0, 0, 0.7);
+  height: 200vh;
+  background: rgba(0, 0, 0, 0.98);
   position: fixed;
-  top: 100px;
+  top: 0;
   z-index: 100;
   display: none;
 }
@@ -189,24 +189,30 @@ section {
 #zone-pro form {
   width: 400px;
   height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 150;
+  font-family: 'Lato';
+  text-align: center;
+  color: white;
+  margin: 10px auto;
+  border-bottom: solid white 1px;
 }
 
-#zone-pro form input {
+#zone-pro form input,
+select {
   width: 100%;
-  height: 40px;
   margin: 10px auto;
   text-align: center;
   border-radius: 10px;
   border: none;
   background: white;
-  z-index: 200;
+  color: black;
+  /* z-index: 200; */
 }
+
+#zone-pro .inputpetit {
+  width: 70px;
+  height: 35px;
+}
+
 
 #zone-pro form input:hover {
   scale: 1.05;
@@ -215,17 +221,28 @@ section {
 }
 
 #btn-zone-pro,
-#btn-zone-pro-petit,
-#zone-pro img {
+#zone-pro img,
+#zone-pro button {
   cursor: pointer;
+}
+
+#zone-pro button {
+  margin-bottom: 15px;
 }
 
 
 #zone-pro img {
   width: 50px;
-  margin: auto;
-  z-index: 500;
+  /* z-index: 250; */
+  margin: 10px auto;
 }
+
+#zone-pro h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+
 
 
 
@@ -390,8 +407,8 @@ article.promo::before {
   position: absolute;
   width: 70px;
   height: 70px;
-  top: -15px;
-  right: -15px;
+  top: -25px;
+  right: -20px;
   background: url("img/voyages/promos/20percent.png");
   background-size: cover;
 }
@@ -401,17 +418,17 @@ article.promo::before {
   position: absolute;
   width: 70px;
   height: 70px;
-  top: -15px;
-  left: -15px;
+  top: -25px;
+  right: -20px;
   background: url("img/voyages/promos/30percent.png");
   background-size: cover;
 }
 
-.conteneur-promo>a:nth-child(2n) figure {
+.conteneur-promo>a:nth-child(even) figure {
   flex-direction: row-reverse;
 }
 
-.conteneur-promo>a:nth-child(2n) figure img {
+.conteneur-promo>a:nth-child(even) figure img {
   border-radius: 0px 8px 8px 0px;
 }
 
@@ -430,7 +447,9 @@ article.promo::before {
 
 .section-promos figure img {
   border-radius: 8px 0px 0px 8px;
-  max-width: 180px;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
 }
 
 .section-promos figcaption {
@@ -481,8 +500,9 @@ article.promo::before {
 
 }
 
-.duree-promo img {
+figure .duree-promo img {
   height: 1em;
+  width: 1em;
 
 }
 
@@ -967,13 +987,20 @@ header {
 
 }
 
-#langage {
+#langage,
+#langage-burger {
   width: 24px;
   height: 16px;
   background: url("img/france-flag.svg");
   background-size: cover;
   border: solid white 1px;
+  margin: auto;
 }
+
+#langage-burger {
+  margin: 5px auto 0;
+}
+
 
 #menu-petit {
   background: rgba(0, 0, 0, 0.7);
@@ -983,11 +1010,17 @@ header {
 .menu-petit-cache {
   opacity: 0;
   animation: animation-menu-petit-cache 0.35s linear;
-
 }
+
 
 .menu-petit-visible {
   animation: animation-menu-petit-visible 0.35s linear;
+}
+
+#menu-petit img {
+  width: 40px;
+  margin: -25px auto 0px;
+  cursor: pointer;
 }
 
 
@@ -1087,10 +1120,10 @@ footer {
 
   .conteneur-promo {
 
-    max-width: 1200px;
+    max-width: 1400px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   article.promo {
