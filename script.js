@@ -1,19 +1,3 @@
-// PAUSE VIDEO & LAUNCH REGION SLIDE
-window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    if (scrollPosition >= 1000) {
-        document.getElementById('background-video').pause();
-        callAutoNextRegion();
-    }
-    else { document.getElementById('background-video').play(); }
-});
-
-function callAutoNextRegion() {
-    autoNextRegion();
-    callAutoNextRegion = function () { };
-
-}
-
 // MENU BURGER
 let iconeMenuBurger = document.getElementById('burger-button');
 iconeMenuBurger.addEventListener("click", showOrHideBurgerMenu);
@@ -24,14 +8,17 @@ function showOrHideBurgerMenu() {
     document.body.className = "";
     if (document.getElementById('zone-login').style.display !== "block") {
 
-        if (menuBurger.classList == "menu-petit-cache") {
+
+
+        if (menuBurger.style.display == "none") {
+            menuBurger.style.display = "block";
             menuBurger.classList.replace("menu-petit-cache", "menu-petit-visible");
             iconeMenuBurger.style.transform = "rotate(90deg)";
 
 
         }
         else {
-
+            menuBurger.style.display = "none";
             menuBurger.classList.replace("menu-petit-visible", "menu-petit-cache");
             iconeMenuBurger.style.transform = "rotate(0deg)";
 
@@ -39,6 +26,8 @@ function showOrHideBurgerMenu() {
 
     }
 }
+
+
 // LOGIN ZONE
 
 function showOrHideLoginZone() {
@@ -67,7 +56,11 @@ function showOrHideProZone() {
 let rechercheMobile = document.getElementById('recherche-voyage-mobile');
 let rechercheMobileCachee = document.getElementById('recherche-cachee');
 
-rechercheMobile.addEventListener("click", showMobileSearch);
+if (rechercheMobile) {
+    rechercheMobile.addEventListener("click", showMobileSearch);
+}
+
+
 
 function showMobileSearch() {
     rechercheMobile.classList.replace("recherche-voyage-mobile-fermee", "recherche-voyage-mobile-ouverte");
@@ -84,6 +77,30 @@ function hideMobileSearch() {
     rechercheMobileCachee.style.display = "none";
     document.getElementById('trouver-mon-voyage').style.display = "flex";
     rechercheMobile.addEventListener("click", showMobileSearch, true);
+
+}
+
+// RESERVATION VOYAGES
+let dureeSejourInput = document.getElementById('durée-sejour');
+let nombrePersonnesInput = document.getElementById('nb-personnes');
+let randomPrixSejour = Math.floor(Math.random() * (52 - 32 + 1)) + 32;
+
+if (dureeSejourInput) {
+    dureeSejourInput.addEventListener('change', updatePrixSejour);
+    nombrePersonnesInput.addEventListener('change', updatePrixSejour);
+    document.getElementById('prix-reservation-voyage').innerHTML = randomPrixSejour * 2 + '€';
+}
+
+function updatePrixSejour() {
+    console.log("Fonction de mise à jour du prix appelée");
+    let dureeSejourValue = document.getElementById('durée-sejour').value;
+    let nombrePersonnesValue = document.getElementById('nb-personnes').value;
+    let prixFinal = randomPrixSejour * dureeSejourValue * nombrePersonnesValue;
+    document.getElementById('prix-reservation-voyage').innerHTML = prixFinal + '€';
+
+
+
+
 
 }
 
@@ -150,30 +167,34 @@ function prevRegion() {
 function autoNextRegion() {
     autoRegionInterval = setInterval(nextRegion, 4000);
 }
-
+if (sectionRegion) {
+    autoNextRegion();
+}
 
 // RECHERCHE FILTREE
-
-document.getElementById('regions').addEventListener('change', function () {
-    let selectedRegion = this.value;
-    let enviesDropdown = document.getElementById('envies');
-    let enviesOptions = enviesDropdown.options;
-
-
-    for (let i = 0; i < enviesOptions.length; i++) {
-        let envie = enviesOptions[i];
-        let envieValue = envie.value;
+let searchRegion = document.getElementById('regions');
+if (searchRegion) {
+    document.getElementById('regions').addEventListener('change', function () {
+        let selectedRegion = this.value;
+        let enviesDropdown = document.getElementById('envies');
+        let enviesOptions = enviesDropdown.options;
 
 
-        envie.style.display = 'none';
+        for (let i = 0; i < enviesOptions.length; i++) {
+            let envie = enviesOptions[i];
+            let envieValue = envie.value;
 
 
-        if (isEnvieAvailableInRegion(envieValue, selectedRegion)) {
-            envie.style.display = 'block';
+            envie.style.display = 'none';
+
+
+            if (isEnvieAvailableInRegion(envieValue, selectedRegion)) {
+                envie.style.display = 'block';
+            }
         }
-    }
-    pushResearchLink();
-});
+        pushResearchLink();
+    });
+}
 
 let enviesDisponiblesParRegion = {
     'allregions': ['allenvies', 'sommets', 'bienetre', 'marine', 'gourmande', 'harmonie', 'plage', 'sentiers', 'sport', 'culture', 'eco'],
@@ -198,28 +219,30 @@ function isEnvieAvailableInRegion(envie, region) {
     return enviesDisponiblesParRegion[region].includes(envie);
 
 }
-
-document.getElementById('envies').addEventListener('change', function () {
-    let selectedEnvie = this.value;
-    let regionsDropdown = document.getElementById('regions');
-    let regionsOptions = regionsDropdown.options;
-
-
-    for (let i = 0; i < regionsOptions.length; i++) {
-        let region = regionsOptions[i];
-        let regionValue = region.value;
+let searchEnvie = document.getElementById('envies');
+if (searchEnvie) {
+    document.getElementById('envies').addEventListener('change', function () {
+        let selectedEnvie = this.value;
+        let regionsDropdown = document.getElementById('regions');
+        let regionsOptions = regionsDropdown.options;
 
 
-        region.style.display = 'none';
+        for (let i = 0; i < regionsOptions.length; i++) {
+            let region = regionsOptions[i];
+            let regionValue = region.value;
 
 
-        if (isRegionAvailableForEnvie(selectedEnvie, regionValue)) {
-            region.style.display = 'block';
+            region.style.display = 'none';
+
+
+            if (isRegionAvailableForEnvie(selectedEnvie, regionValue)) {
+                region.style.display = 'block';
+            }
         }
-    }
 
+    }
+    );
 }
-);
 
 function isRegionAvailableForEnvie(envie, region) {
     let regionsDisponiblesParEnvie = {};
@@ -237,32 +260,38 @@ function isRegionAvailableForEnvie(envie, region) {
 }
 
 function pushResearchLink() {
-    document.getElementById('search-mobile-icon').addEventListener('click', function () {
+    searchIcon = document.getElementById('search-mobile-icon');
+    if (searchIcon) {
+        document.getElementById('search-mobile-icon').addEventListener('click', function () {
 
-        let selectedRegion = document.getElementById('regions').value;
-        let selectedEnvie = document.getElementById('envies').value;
-        let lien;
+            let selectedRegion = document.getElementById('regions').value;
+            let selectedEnvie = document.getElementById('envies').value;
+            let lien;
 
-        if (selectedEnvie === "allenvies" && selectedRegion === "allregions") {
-            alert("Selectionnez au moins une région ou une envie")
-        }
-        else if (selectedEnvie === "allenvies" && selectedRegion != "allregions") {
-            lien = 'index.php?region=' + selectedRegion;
-            document.getElementById('researchLink').href = lien;
-        }
-        else if (selectedEnvie != "allenvies" && selectedRegion === "allregions") {
-            lien = 'index.php?envie=' + selectedEnvie;
-            document.getElementById('researchLink').href = lien;
-        }
-        else if (selectedEnvie != "allenvies" && selectedRegion != "allregions") {
-            lien = 'index.php?region=' + selectedRegion + '&envie=' + selectedEnvie;
-            document.getElementById('researchLink').href = lien;
-        }
-        else { alert('Erreur dans la recherche') }
+            if (selectedEnvie === "allenvies" && selectedRegion === "allregions") {
+                alert("Selectionnez au moins une région ou une envie")
+            }
+            else if (selectedEnvie === "allenvies" && selectedRegion != "allregions") {
+                lien = 'index.php?region=' + selectedRegion;
+                document.getElementById('researchLink').href = lien;
+            }
+            else if (selectedEnvie != "allenvies" && selectedRegion === "allregions") {
+                lien = 'index.php?envie=' + selectedEnvie;
+                document.getElementById('researchLink').href = lien;
+            }
+            else if (selectedEnvie != "allenvies" && selectedRegion != "allregions") {
+                lien = 'index.php?region=' + selectedRegion + '&envie=' + selectedEnvie;
+                document.getElementById('researchLink').href = lien;
+            }
+            else { alert('Erreur dans la recherche') }
 
 
-    });
+        });
+    }
 
 }
 
 pushResearchLink();
+
+
+

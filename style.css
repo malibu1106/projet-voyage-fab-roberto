@@ -407,22 +407,12 @@ article.promo::before {
   position: absolute;
   width: 70px;
   height: 70px;
-  top: -25px;
-  right: -20px;
-  background: url("img/voyages/promos/20percent.png");
+  top: -22px;
+  right: -12px;
+  background: url("img/voyages/promos/percent.png");
   background-size: cover;
 }
 
-.conteneur-promo>a:nth-child(2n) .promo::before {
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: -25px;
-  right: -20px;
-  background: url("img/voyages/promos/30percent.png");
-  background-size: cover;
-}
 
 .conteneur-promo>a:nth-child(even) figure {
   flex-direction: row-reverse;
@@ -430,6 +420,10 @@ article.promo::before {
 
 .conteneur-promo>a:nth-child(even) figure img {
   border-radius: 0px 8px 8px 0px;
+}
+
+.conteneur-promo>a:nth-child(even) .pourcent-promo {
+  right: -182px;
 }
 
 
@@ -456,10 +450,6 @@ article.promo::before {
   width: 75%;
   position: relative;
 }
-
-
-
-
 
 .titre-promo,
 .sous-titre-promo,
@@ -504,6 +494,16 @@ figure .duree-promo img {
   height: 1em;
   width: 1em;
 
+}
+
+figure .pourcent-promo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  font-size: 1.35em;
+  font-family: 'Roboto';
+  font-weight: 600;
 }
 
 
@@ -702,6 +702,142 @@ hr {
 }
 
 /*--------DETAIL_VOYAGE-------*/
+
+section.detail-voyage {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: rgba(235, 233, 233, 1);
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.conteneur-detail-voyage {
+  max-width: 1000px;
+  margin: auto;
+}
+
+section.detail-voyage h2 {
+  font-size: 1.6em;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #0088b6;
+  margin: 0 auto 10px;
+}
+
+section.detail-voyage h3 {
+  font-size: 1.4em;
+  font-family: 'Lato';
+  font-weight: 400;
+  color: black;
+  margin: 0 auto 20px;
+}
+
+section.detail-voyage h5 {
+  font-size: 1em;
+  font-family: 'Lato';
+  font-weight: 600;
+  color: black;
+  margin-left: 15px;
+  margin-top: 22px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.detail-voyage-lieu-texte,
+.phrase-voyage {
+  text-align: left;
+  margin-left: 22px;
+  font-family: 'Lato';
+}
+
+.conteneur-detail-voyage p {
+  padding: 5px;
+  color: #0088b6;
+}
+
+.conteneur-detail-voyage-texte {
+  margin-top: 32px;
+}
+
+.conteneur-detail-voyage img {
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.conteneur-detail-voyage-reservation-infos {
+
+  font-family: 'Lato';
+}
+
+.conteneur-detail-voyage-reservation-infos button {
+  background: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.conteneur-detail-voyage-reservation-infos select {
+  max-width: 120px;
+}
+
+#prix-reservation-voyage {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+
+}
+
+.conteneur-detail-voyage-texte h4 {
+  font-size: 1.5em;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: black;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***** DEBUT CSS FAB **********/
 /***** DEBUT CSS FAB **********/
 /***** DEBUT CSS FAB **********/
@@ -710,7 +846,7 @@ hr {
 
 
 
-.titre-voyage-details {
+/* .titre-voyage-details {
   font-size: 90px;
   text-align: center;
   border: 2px solid blue;
@@ -744,7 +880,7 @@ hr {
 .photo-voyage {
   margin-top: 30px;
   margin-bottom: 30px;
-}
+} */
 
 
 /***** FIN CSS FAB **********/
@@ -1005,6 +1141,7 @@ header {
 #menu-petit {
   background: rgba(0, 0, 0, 0.7);
   padding: 16px;
+  display: none;
 }
 
 .menu-petit-cache {
@@ -1127,9 +1264,8 @@ footer {
   }
 
   article.promo {
-
-    max-width: 500px;
-    min-width: 400px;
+    width: 500px;
+    margin: 10px 5px;
   }
 
 

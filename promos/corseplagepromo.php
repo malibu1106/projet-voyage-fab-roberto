@@ -3,6 +3,7 @@
           <figure>
             <img title="promo1" src="img/voyages/promos/corse.jpg" alt="promo1">
             <figcaption>
+              <div class="pourcent-promo">-28%</div>
               <div class="titre-promo bold">Corse</div>
               <div class="sous-titre-promo semibold">Plage de rêve</div>
               <div class="conteneur-duree-prix">

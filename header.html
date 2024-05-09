@@ -20,7 +20,7 @@
 
         <span id="burger-button">☰</span>
     </div>
-    <nav id="menu-petit" class="menu-petit-cache">
+    <nav id="menu-petit" class="menu-petit-cache" style="display: none;">
         <ul>
             <li><span onclick="showOrHideLoginZone()" id="btn-login-petit">Connexion</span></li>
             <li><a href="#ancre-voyages">Nos voyages</a></li>
@@ -40,7 +40,7 @@
             <input placeholder="Mot de passe" type="password" id="password" name="password" required>
 
             <input type="submit" value="Se connecter">
-            <img onclick="showOrHideLoginZone()" src="img/close-research.png">
+            <img id="close-login-logo" onclick="showOrHideLoginZone()" src="img/close-research.png">
         </form>
 
     </div>

@@ -37,11 +37,14 @@
             <option value="Voyages Écoresponsables">Voyages Écoresponsables</option>
         </select><br>
 
-        <label for="duree">Durée du voyage :</label><br>
+        <label for="duree">Durée du voyage (X à X jrs):</label><br>
         <input class="inputpetit" type="text" name="duree" id="duree" required><br>
 
-        <label for="prix">Prix du voyage :</label><br>
+        <label for="prix">Prix du voyage (XXX) :</label><br>
         <input class="inputpetit" type="text" name="prix" id="prix" required><br>
+
+        <label for="reduc">Prix du voyage (-XX%) :</label><br>
+        <input class="inputpetit" type="text" name="reduc" id="reduc" required><br>
 
         <button type="submit">Ajouter Promotion</button>
 

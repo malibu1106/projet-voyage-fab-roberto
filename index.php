@@ -2,6 +2,7 @@
 $regionSet = false;
 $envieSet = false;
 $actionSet = false;
+$promoSet = false;
 $region = '';
 $envie = '';
 if (isset($_GET['region'])) {
@@ -11,6 +12,9 @@ if (isset($_GET['region'])) {
 if (isset($_GET['envie'])) {
     $envie = $_GET['envie'];
     $envieSet = true;
+}
+if (isset($_GET['promo'])) {
+    $promoSet = true;
 }
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
@@ -22,7 +26,9 @@ if (isset($_GET['action'])) {
 <?php include 'header.html' ?>
 
 <?php
-if ($regionSet == true && $envieSet == true) {
+if ($promoSet == true) {
+    include("pages/{$region}{$envie}promo.php");
+} else if ($regionSet == true && $envieSet == true) {
     include("pages/$region$envie.php");
 } else if ($regionSet == true) {
     foreach (glob("pages/*$region*.php") as $filename) {
