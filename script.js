@@ -44,13 +44,59 @@ function showOrHideLoginZone() {
 
 // PRO ZONE
 
-function showOrHideProZone() {
-    if (document.getElementById('zone-pro').style.display == "block") {
-        document.getElementById('zone-pro').style.display = "none";
+
+let zoneProPromo = document.getElementById('zone-pro-promo');
+let zoneProPromoCheckBox = document.getElementById('promoCheckbox');
+if (zoneProPromoCheckBox) {
+    zoneProPromoCheckBox.addEventListener("change", showOrHideZoneProPromo)
+}
+function showOrHideZoneProPromo() {
+    if (zoneProPromo.style.display == "block") {
+        zoneProPromo.style.display = "none";
     }
-    else { document.getElementById('zone-pro').style.display = "block" }
+    else { zoneProPromo.style.display = "block" }
 
 }
+
+let blocParaSelector = document.getElementsByClassName('zone-pro-add-voyage-bloc-para');
+let buttonBlocParaSelection = document.getElementsByClassName('ajouterPara');
+let buttonRemoveBlocParaSelection = document.getElementsByClassName('retirerPara');
+
+let paraIndex = 0;
+if (blocParaSelector.length > 0) {
+    buttonBlocParaSelection[paraIndex].addEventListener("click", displayNextPara)
+    blocParaSelector[paraIndex].style.display = "block";
+}
+
+function displayNextPara() {
+    if (paraIndex > 0) {
+        buttonRemoveBlocParaSelection[paraIndex - 1].style.display = "none";
+    }
+    paraIndex++;
+    blocParaSelector[paraIndex].style.display = "block";
+    buttonBlocParaSelection[paraIndex - 1].style.display = "none";
+    console.log(paraIndex)
+    if (paraIndex < 3) {
+        buttonBlocParaSelection[paraIndex].addEventListener("click", displayNextPara);
+    }
+    buttonRemoveBlocParaSelection[paraIndex - 1].addEventListener("click", removeThisPara);
+}
+
+function removeThisPara() {
+    paraIndex--;
+    blocParaSelector[paraIndex + 1].style.display = "none";
+    buttonBlocParaSelection[paraIndex].style.display = "block";
+    if (paraIndex > 0) {
+        buttonRemoveBlocParaSelection[paraIndex - 1].style.display = "block";
+    }
+    if (paraIndex < 4) {
+        buttonRemoveBlocParaSelection[paraIndex].addEventListener("click", removeThisPara);
+        buttonBlocParaSelection[paraIndex].addEventListener("click", displayNextPara);
+    }
+
+}
+
+
 
 // RECHERCHE MASQUEE
 let rechercheMobile = document.getElementById('recherche-voyage-mobile');
@@ -80,30 +126,32 @@ function hideMobileSearch() {
 
 }
 
-// RESERVATION VOYAGES
+// CALCUL DU PRIX
 let dureeSejourInput = document.getElementById('durée-sejour');
 let nombrePersonnesInput = document.getElementById('nb-personnes');
-let randomPrixSejour = Math.floor(Math.random() * (52 - 32 + 1)) + 32;
+let PrixSejourElement = document.getElementById('prix-reservation-voyage');
+let prixFinal = 0;
+let PrixSejour = 0;
 
-if (dureeSejourInput) {
+if (dureeSejourInput && PrixSejourElement) {
+    PrixSejour = parseFloat(PrixSejourElement.textContent);
     dureeSejourInput.addEventListener('change', updatePrixSejour);
     nombrePersonnesInput.addEventListener('change', updatePrixSejour);
-    document.getElementById('prix-reservation-voyage').innerHTML = randomPrixSejour * 2 + '€';
+
+
+    updatePrixSejour();
 }
 
 function updatePrixSejour() {
-    console.log("Fonction de mise à jour du prix appelée");
-    let dureeSejourValue = document.getElementById('durée-sejour').value;
-    let nombrePersonnesValue = document.getElementById('nb-personnes').value;
-    let prixFinal = randomPrixSejour * dureeSejourValue * nombrePersonnesValue;
-    document.getElementById('prix-reservation-voyage').innerHTML = prixFinal + '€';
+    let dureeSejourValue = parseFloat(document.getElementById('durée-sejour').value);
+    let nombrePersonnesValue = parseFloat(document.getElementById('nb-personnes').value);
 
+    prixFinal = PrixSejour * dureeSejourValue * nombrePersonnesValue;
 
-
-
-
+    if (PrixSejourElement) {
+        PrixSejourElement.innerHTML = prixFinal + '€';
+    }
 }
-
 
 
 // BACKGROUND REGIONS

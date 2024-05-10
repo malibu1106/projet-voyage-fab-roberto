@@ -3,6 +3,7 @@ $regionSet = false;
 $envieSet = false;
 $actionSet = false;
 $promoSet = false;
+$zoneProSet = false;
 $region = '';
 $envie = '';
 if (isset($_GET['region'])) {
@@ -19,6 +20,10 @@ if (isset($_GET['promo'])) {
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     $actionSet = true;
+}
+if (isset($_GET['zonePro'])) {
+    $zonePro = $_GET['zonePro'];
+    $zoneProSet = true;
 }
 ?>
 
@@ -43,7 +48,9 @@ if ($promoSet == true) {
         }
     }
 } else if ($actionSet == true) {
-    include 'traitementpromo.php';
+    include 'traitementbackoffice.php';
+} else if ($zoneProSet == true) {
+    include 'zonepro.php';
 } else {
     include 'accueil.php';
 }
