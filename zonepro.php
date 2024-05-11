@@ -44,11 +44,11 @@
                     <hr>
 
 
-                    <label for="imageVoyage">Image principale :</label>
-                    <input class="inputfile" type="file" name="imageVoyage" id="imageVoyage" required><br>
+                    <label for="image">Image principale :</label>
+                    <input class="inputfile" type="file" name="image" id="image" required><br>
 
-                    <label for="regionVoyage">Région :</label>
-                    <select name="regionVoyage" id="regionVoyage" required>
+                    <label for="region">Région :</label>
+                    <select name="region" id="region" required>
                         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
                         <option value="Bretagne">Bretagne</option>
                         <option value="Centre-Val de Loire">Centre-Val de Loire</option>
@@ -63,8 +63,8 @@
                         <option value="Paca">Provence-Alpes-Côte d'Azur</option>
                     </select><br>
 
-                    <label for="envieVoyage">Envie :</label>
-                    <select name="envieVoyage" id="envieVoyage" required>
+                    <label for="envie">Envie :</label>
+                    <select name="envie" id="envie" required>
                         <option value="Atteignez des sommets">Atteignez des sommets</option>
                         <option value="Bien-être absolu">Bien-être absolu</option>
                         <option value="Escale marine">Escale marine</option>
@@ -89,7 +89,7 @@
                         <label for="nompara2">Titre paragraphe 2:</label><br>
                         <input class="inputmoyen" type="text" name="nompara2" id="nompara2"><br>
                         <label for="para2">Paragraphe 2:</label><br>
-                        <textarea class="inputpara" name="para2" id="para2" required></textarea><br>
+                        <textarea class="inputpara" name="para2" id="para2"></textarea><br>
                         <div class="retirerPara">Retirer ce paragraphe</div><br>
                         <div class="ajouterPara">Ajouter un paragraphe</div><br>
 
@@ -99,7 +99,7 @@
                         <label for="nompara3">Titre paragraphe 3:</label><br>
                         <input class="inputmoyen" type="text" name="nompara3" id="nompara3"><br>
                         <label for="para3">Paragraphe 3:</label><br>
-                        <textarea class="inputpara" name="para3" id="para3" required></textarea><br>
+                        <textarea class="inputpara" name="para3" id="para3"></textarea><br>
                         <div class="retirerPara">Retirer ce paragraphe</div><br>
                         <div class="ajouterPara">Ajouter un paragraphe</div><br>
                     </div>
@@ -108,7 +108,7 @@
                         <label for="nompara4">Titre paragraphe 4:</label><br>
                         <input class="inputmoyen" type="text" name="nompara4" id="nompara4"><br>
                         <label for="para4">Paragraphe 4:</label><br>
-                        <textarea class="inputpara" name="para4" id="para4" required></textarea><br>
+                        <textarea class="inputpara" name="para4" id="para4"></textarea><br>
                         <div class="retirerPara">Retirer ce paragraphe</div><br>
                     </div>
 
@@ -127,7 +127,7 @@
                         <?php
                         echo '<option value="label" selected disabled>Sélectionner avantage 1</option>';
                         foreach (glob("img/avantages-voyage/*.png") as $filename) {
-                            echo '<option value="' . $filename . '">' . $filename . '</option>';
+                            echo '<option value="' . $filename . '">' . $filename . 'required </option>';
                         }
                         ?>
                     </select>
@@ -135,7 +135,7 @@
                         <?php
                         echo '<option value="label" selected disabled>Sélectionner avantage 2</option>';
                         foreach (glob("img/avantages-voyage/*.png") as $filename) {
-                            echo '<option value="' . $filename . '">' . $filename . '</option>';
+                            echo '<option value="' . $filename . '">' . $filename . 'required </option>';
                         }
                         ?>
                     </select>
@@ -143,7 +143,7 @@
                         <?php
                         echo '<option value="label" selected disabled>Sélectionner avantage 3</option>';
                         foreach (glob("img/avantages-voyage/*.png") as $filename) {
-                            echo '<option value="' . $filename . '">' . $filename . '</option>';
+                            echo '<option value="' . $filename . '">' . $filename . 'required </option>';
                         }
                         ?>
                     </select>
@@ -172,10 +172,10 @@
                     <label for="prixNuitParPers">Prix nuit par personne:</label><br>
                     <input class="inputpetit" type="text" name="prixNuitParPers" id="prixNuitParPers" required><br>
 
-                    <label for="appliquerPromo">Mettre en promotion</label>
-                    <input type="checkbox" id="promoCheckbox">
+                    <label for="promoCheckbox">Mettre en promotion</label>
+                    <input type="checkbox" id="promoCheckbox" name="promoCheckbox">
 
-                    <!-- </form> -->
+
                 </div>
 
 
@@ -184,11 +184,10 @@
                 <div id="zone-pro-promo">
 
 
-                    <!-- <form action="index.php?action=ajouterpromo" method="post" enctype="multipart/form-data"> -->
-                    <h2 class="titre-zone-pro">Détails de la promotion</h2>
-                    <label for="image">Image pour la vignette :</label>
-                    <select name="imagePromo">
 
+                    <h2 class="titre-zone-pro">Détails de la promotion</h2>
+                    <label for="imagePromo">Image pour la vignette :</label>
+                    <select name="imagePromo">
                         <option value="label" selected disabled>Sélectionner l'image</option>
                         <option value="imagePrincipale">Image principale</option>
                         <option value="imageSejour">Image lieu de séjour</option>
@@ -199,11 +198,11 @@
 
 
                     <label for="reduc">Réduction du voyage (-XX%):</label><br>
-                    <input class="inputpetit" type="text" name="reduc" id="reduc" required><br>
+                    <input class="inputpetit" type="text" name="reduc" id="reduc"><br>
 
 
                 </div>
-                <button type="submit">Ajouter mon voyage</button>
+                <button type="submit" name="ajouterVoyage">Ajouter mon voyage</button>
             </form>
 
 
