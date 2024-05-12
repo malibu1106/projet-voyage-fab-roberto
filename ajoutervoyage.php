@@ -128,3 +128,5 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
 } else {
     echo "Veuillez sélectionner une image.";
 }
+
+include 'addobjectinsearch.php';

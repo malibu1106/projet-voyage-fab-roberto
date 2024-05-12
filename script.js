@@ -350,6 +350,3 @@ function pushResearchLink() {
 }
 
 pushResearchLink();
-
-
-

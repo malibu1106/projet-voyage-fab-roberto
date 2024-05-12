@@ -13,7 +13,7 @@
                 <div class="conteneur-select-mobile">
                     <label for="regions">Régions</label>
                     <select id="regions" name="regions">
-                        <option class="researchOption" value="allregions">Toutes les régions</option>
+
 
                         <option class="researchOption" value="allregions">Toutes les régions</option>
                         <option class="researchOption" value="auvergne">Auvergne-Rhône-Alpes</option>

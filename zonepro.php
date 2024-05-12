@@ -49,6 +49,7 @@
 
                     <label for="region">Région :</label>
                     <select name="region" id="region" required>
+                        <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
                         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
                         <option value="Bretagne">Bretagne</option>
                         <option value="Centre-Val de Loire">Centre-Val de Loire</option>
