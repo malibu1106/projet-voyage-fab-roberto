@@ -7,8 +7,8 @@
         <div class="titre-promo bold">Grand Est</div>
         <div class="sous-titre-promo semibold">Vibrations culturelles</div>
         <div class="conteneur-duree-prix">
-          <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 2 à 15jrs</div>
-          <div class="prix-promo">dès <span class="red bold prix">359€</span></div>
+          <div class="duree-promo"><img src="img/voyages/promos/hourglass.png">6 jrs max</div>
+          <div class="prix-promo"><span class="red bold prix">39€</span>/nuit</div>
         </div>
       </figcaption>
     </figure>

@@ -6,6 +6,7 @@ $promoSet = false;
 $zoneProSet = false;
 $region = '';
 $envie = '';
+$counter = '';
 if (isset($_GET['region'])) {
     $region = $_GET['region'];
     $regionSet = true;
@@ -25,6 +26,9 @@ if (isset($_GET['zonePro'])) {
     $zonePro = $_GET['zonePro'];
     $zoneProSet = true;
 }
+if (isset($_GET['counter'])) {
+    $counter = $_GET['counter'];
+}
 ?>
 
 <?php include 'prebody.html' ?>
@@ -32,9 +36,13 @@ if (isset($_GET['zonePro'])) {
 
 <?php
 if ($promoSet == true) {
-    include("pages/{$region}{$envie}promo.php");
+    include("pages/{$region}{$envie}promo{$counter}.php");
 } else if ($regionSet == true && $envieSet == true) {
-    include("pages/$region$envie.php");
+    $pattern = "pages/{$region}{$envie}*.php";
+    $files = glob($pattern);
+    foreach ($files as $file) {
+        include($file);
+    }
 } else if ($regionSet == true) {
     foreach (glob("pages/*$region*.php") as $filename) {
         if (basename($filename) !== "$region.php") {

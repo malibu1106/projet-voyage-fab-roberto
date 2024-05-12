@@ -7,8 +7,8 @@
         <div class="titre-promo bold">Auvergne</div>
         <div class="sous-titre-promo semibold">Bien être absolu</div>
         <div class="conteneur-duree-prix">
-          <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 7 à 15jrs</div>
-          <div class="prix-promo">dès <span class="red bold prix">979€</span></div>
+          <div class="duree-promo"><img src="img/voyages/promos/hourglass.png">8 jrs max</div>
+          <div class="prix-promo"><span class="red bold prix">54€</span>/nuit</div>
         </div>
       </figcaption>
     </figure>

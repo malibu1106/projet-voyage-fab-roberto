@@ -7,8 +7,8 @@
               <div class="titre-promo bold">Corse</div>
               <div class="sous-titre-promo semibold">Plage de rêve</div>
               <div class="conteneur-duree-prix">
-                <div class="duree-promo"><img src="img/voyages/promos/hourglass.png"> 3 à 7jrs</div>
-                <div class="prix-promo">dès <span class="red bold prix">799€</span></div>
+                <div class="duree-promo"><img src="img/voyages/promos/hourglass.png">7 jrs max</div>
+                <div class="prix-promo"><span class="red bold prix">39€</span>/nuit</div>
               </div>
             </figcaption>
           </figure>

@@ -170,7 +170,7 @@
                     <input type="date" id="disponible-partir-de" name="disponible-partir-de" value="2024-05-17" min="2024-05-17" max="2024-12-31" /><br>
 
                     <label for="prixNuitParPers">Prix nuit par personne:</label><br>
-                    <input class="inputpetit" type="text" name="prixNuitParPers" id="prixNuitParPers" required><br>
+                    <input class="inputpetit" type="number" name="prixNuitParPers" id="prixNuitParPers" required><br>
 
                     <label for="promoCheckbox">Mettre en promotion</label>
                     <input type="checkbox" id="promoCheckbox" name="promoCheckbox">
@@ -186,12 +186,7 @@
 
 
                     <h2 class="titre-zone-pro">Détails de la promotion</h2>
-                    <label for="imagePromo">Image pour la vignette :</label>
-                    <select name="imagePromo">
-                        <option value="label" selected disabled>Sélectionner l'image</option>
-                        <option value="imagePrincipale">Image principale</option>
-                        <option value="imageSejour">Image lieu de séjour</option>
-                    </select>
+
                     <br>
 
 

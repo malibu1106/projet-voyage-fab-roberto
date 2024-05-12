@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nompara1 = $_POST["nompara1"];
     $para1 = $_POST["para1"];
     $lieuDuSejour = $_POST["lieuDuSejour"];
+    $phraseLieuDuSejour = $_POST["phraseLieuDuSejour"];
     $avantagesVoyage1 = $_POST["avantages-voyage-1"];
     $avantagesVoyage2 = $_POST["avantages-voyage-2"];
     $avantagesVoyage3 = $_POST["avantages-voyage-3"];
@@ -134,11 +135,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_POST['promoCheckbox'])) {
 
-        // include 'ajouterpromo.php';
-        // include 'ajoutervoyage.php';
+        include 'ajoutervoyage.php';
+
+        include 'ajouterpromo.php';
+
         echo 'promo + voyage';
     } else {
-        // include 'ajoutervoyage.php';
-        echo 'voyage';
+        include 'ajoutervoyage.php';
     }
 }

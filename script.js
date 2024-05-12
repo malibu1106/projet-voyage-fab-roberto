@@ -154,6 +154,8 @@ function updatePrixSejour() {
 }
 
 
+
+
 // BACKGROUND REGIONS
 
 let sectionRegion = document.getElementById('background-regions');

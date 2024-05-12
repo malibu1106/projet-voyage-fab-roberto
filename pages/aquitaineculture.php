@@ -72,7 +72,7 @@
                     <label for="startdate">Jour d'arrivée:</label>
                     <input type="date" id="startdate" name="startdate" value="2024-05-17" min="2024-05-17" max="2024-12-31" /><br>
 
-                    <span id="prix-reservation-voyage">49</span><br>
+                    <span id="prix-reservation-voyage">32</span><br>
                     <button>Reservez</button>
                 </div>
             </div>
