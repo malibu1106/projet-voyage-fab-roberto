@@ -2,7 +2,7 @@ PB rencontrés :
 
     Si deux voyages même région ou même envie :
     Alors la fonction de calcul du prix en JS marche pas,
-    need la refaire avec des class plutôt que ID, beau bordel en perspective !
+    need la refaire avec des class plutôt que ID, beau bordel en perspective ! - FIXED !!!
 
     Les filtres de la recherche en JS ont étés rentrés manuellement, dans le cas de l'ajout
     d'un voyage, il faudrait aller jusqu'à modifier le script.js et ajuster les objets régions/envies

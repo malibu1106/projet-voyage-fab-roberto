@@ -858,7 +858,7 @@ section.detail-voyage h5 {
   max-width: 120px;
 }
 
-#prix-reservation-voyage {
+.prix-reservation-voyage {
   position: absolute;
   bottom: 0;
   right: 10px;

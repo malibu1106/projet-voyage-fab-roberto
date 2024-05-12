@@ -82,14 +82,14 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
                     </div>
                 </div>
                 <div class="conteneur-detail-voyage-reservation-infos">
-                    <select name="durée-sejour" id="durée-sejour" required>';
+                    <select name="durée-sejour" class="durée-sejour" required>';
 
         for ($i = 1; $i <= $nombreJours; $i++) {
             $html .= '<option value="' . $i . '">' . $i . ' jour' . ($i > 1 ? 's' : '') . '</option>';
         }
 
         $html .= '</select>
-                    <select name="nb-personnes" id="nb-personnes" required>';
+                    <select name="nb-personnes" class="nb-personnes" required>';
         for ($i = 1; $i <= $nombrePersonnes; $i++) {
             $html .= '<option value="' . $i . '">' . $i . ' personne' . ($i > 1 ? 's' : '') . '</option>';
         }
@@ -98,9 +98,9 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
                         
                     </select><br>
                     <label for="startdate">Jour d\'arrivée:</label>
-                    <input type="date" id="startdate" name="startdate" value="2024-05-17" min="' . $dateDispo . '" max="2024-12-31" /><br>
+                    <input type="date" id="startdate" name="startdate" value="' . $dateDispo . '" min="' . $dateDispo . '" max="2024-12-31" /><br>
 
-                    <span id="prix-reservation-voyage">' . $prixNuitPersonne . '</span><br>
+                    <span class="prix-reservation-voyage">' . $prixNuitPersonne . '</span><br>
                     <button>Reservez</button>
                 </div>
             </div>

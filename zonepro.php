@@ -60,7 +60,7 @@
                         <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
                         <option value="Occitanie">Occitanie</option>
                         <option value="Pays de la Loire">Pays de la Loire</option>
-                        <option value="Paca">Provence-Alpes-Côte d'Azur</option>
+                        <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
                     </select><br>
 
                     <label for="envie">Envie :</label>

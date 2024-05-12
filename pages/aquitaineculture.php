@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="conteneur-detail-voyage-reservation-infos">
-                    <select name="durée-sejour" id="durée-sejour" required>
+                    <select name="durée-sejour" class="durée-sejour" required>
                         <option value="1">1 jour</option>
                         <option value="2">2 jours</option>
                         <option value="3">3 jours</option>
@@ -62,7 +62,7 @@
                         <option value="6">6 jours</option>
                         <option value="7">7 jours</option>
                     </select>
-                    <select name="nb-personnes" id="nb-personnes" required>
+                    <select name="nb-personnes" class="nb-personnes" required>
 
                         <option value="1">1 personne</option>
                         <option value="2">2 personnes</option>
@@ -72,7 +72,7 @@
                     <label for="startdate">Jour d'arrivée:</label>
                     <input type="date" id="startdate" name="startdate" value="2024-05-17" min="2024-05-17" max="2024-12-31" /><br>
 
-                    <span id="prix-reservation-voyage">32</span><br>
+                    <span class="prix-reservation-voyage">32</span><br>
                     <button>Reservez</button>
                 </div>
             </div>

@@ -127,31 +127,39 @@ function hideMobileSearch() {
 }
 
 // CALCUL DU PRIX
-let dureeSejourInput = document.getElementById('durée-sejour');
-let nombrePersonnesInput = document.getElementById('nb-personnes');
-let PrixSejourElement = document.getElementById('prix-reservation-voyage');
-let prixFinal = 0;
-let PrixSejour = 0;
 
-if (dureeSejourInput && PrixSejourElement) {
-    PrixSejour = parseFloat(PrixSejourElement.textContent);
-    dureeSejourInput.addEventListener('change', updatePrixSejour);
-    nombrePersonnesInput.addEventListener('change', updatePrixSejour);
+let dureeSejourInputs = document.getElementsByClassName('durée-sejour');
+let nombrePersonnesInputs = document.getElementsByClassName('nb-personnes');
+let prixSejourElements = document.getElementsByClassName('prix-reservation-voyage');
+let prixIndex = [];
 
-
-    updatePrixSejour();
+for (let i = 0; i < prixSejourElements.length; i++) {
+    prixSejourElements[i].innerHTML += '€';
 }
 
-function updatePrixSejour() {
-    let dureeSejourValue = parseFloat(document.getElementById('durée-sejour').value);
-    let nombrePersonnesValue = parseFloat(document.getElementById('nb-personnes').value);
-
-    prixFinal = PrixSejour * dureeSejourValue * nombrePersonnesValue;
-
-    if (PrixSejourElement) {
-        PrixSejourElement.innerHTML = prixFinal + '€';
+if (dureeSejourInputs.length > 0) {
+    for (let i = 0; i < dureeSejourInputs.length; i++) {
+        prixIndex[i] = parseFloat(prixSejourElements[i].innerHTML);
+        dureeSejourInputs[i].addEventListener("change", function () {
+            updatePrix(i);
+        });
+        nombrePersonnesInputs[i].addEventListener("change", function () {
+            updatePrix(i);
+        });
     }
 }
+
+function updatePrix(index) {
+    let dureeSejourValue = parseFloat(dureeSejourInputs[index].value);
+    let nombrePersonnesValue = parseFloat(nombrePersonnesInputs[index].value);
+    let prixSejour = prixIndex[index];
+
+    prixSejourElements[index].innerHTML = (dureeSejourValue * nombrePersonnesValue * prixSejour) + '€';
+}
+
+
+
+
 
 
 

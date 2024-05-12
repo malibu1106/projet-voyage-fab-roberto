@@ -93,6 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Gérer le cas où aucune option n'est sélectionnée ou la valeur sélectionnée n'est pas reconnue
         $regionLien = "valeur_par_defaut";
     }
+    echo $region;
+    echo $regionLien;
 
     if ($envie === "Atteignez des sommets") {
         $envieLien = "sommets";
