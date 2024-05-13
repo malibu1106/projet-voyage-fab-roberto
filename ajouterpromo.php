@@ -1,6 +1,8 @@
 <?php
 // Vérifie si un fichier a été téléchargé
 
+
+
 // Générer le nom de fichier PHP
 $folder_promo_path = "promos/";
 $file_promo_name = $folder_promo_path . $regionLien . $envieLien . "promo.php";

@@ -30,6 +30,10 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
             $file_name = $folder_path . $regionLien . $envieLien . $counter . ".php";
         }
 
+        $nomSansExtension1 = pathinfo(basename($avantagesVoyage1), PATHINFO_FILENAME);
+        $nomSansExtension2 = pathinfo(basename($avantagesVoyage2), PATHINFO_FILENAME);
+        $nomSansExtension3 = pathinfo(basename($avantagesVoyage3), PATHINFO_FILENAME);
+
         // Générer le contenu HTML
         $html = '<section class="detail-voyage">
     <div class="conteneur-detail-voyage">
@@ -72,13 +76,13 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
             <div class="conteneur-detail-voyage-avantages-infos">
                 <div class="conteneur-detail-voyage-avantages">
                     <div class="detail-voyage-avantage"><img src="' . $avantagesVoyage1 . '">
-                        <div class="voyage-titre-avantage">Sauna</div>
+                        <div class="voyage-titre-avantage">' . $nomSansExtension1 . '</div>
                     </div>
                     <div class="detail-voyage-avantage"><img src="' . $avantagesVoyage2 . '">
-                        <div class="voyage-titre-avantage">Piscine</div>
+                        <div class="voyage-titre-avantage">' . $nomSansExtension2 . '</div>
                     </div>
                     <div class="detail-voyage-avantage"><img src="' . $avantagesVoyage3 . '">
-                        <div class="voyage-titre-avantage">Restaurant</div>
+                        <div class="voyage-titre-avantage">' . $nomSansExtension3 . '</div>
                     </div>
                 </div>
                 <div class="conteneur-detail-voyage-reservation-infos">

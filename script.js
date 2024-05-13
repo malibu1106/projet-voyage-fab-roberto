@@ -350,3 +350,29 @@ function pushResearchLink() {
 }
 
 pushResearchLink();
+
+enviesDisponiblesParRegion['corse'] = enviesDisponiblesParRegion['corse'].concat(["sentiers"]);
+enviesDisponiblesParRegion['bretagne'] = enviesDisponiblesParRegion['bretagne'].concat(["marine"]);
+enviesDisponiblesParRegion['hdf'] = enviesDisponiblesParRegion['hdf'].concat(["marine"]);
+enviesDisponiblesParRegion['bourgogne'] = enviesDisponiblesParRegion['bourgogne'].concat(["gourmande"]);
+enviesDisponiblesParRegion['grandest'] = enviesDisponiblesParRegion['grandest'].concat(["gourmande"]);
+enviesDisponiblesParRegion['auvergne'] = enviesDisponiblesParRegion['auvergne'].concat(["bienetre"]);
+enviesDisponiblesParRegion['normandie'] = enviesDisponiblesParRegion['normandie'].concat(["bienetre"]);
+enviesDisponiblesParRegion['paca'] = enviesDisponiblesParRegion['paca'].concat(["sommets"]);
+enviesDisponiblesParRegion['occitanie'] = enviesDisponiblesParRegion['occitanie'].concat(["sommets"]);
+enviesDisponiblesParRegion['hdf'] = enviesDisponiblesParRegion['hdf'].concat(["sport"]);
+enviesDisponiblesParRegion['occitanie'] = enviesDisponiblesParRegion['occitanie'].concat(["sport"]);
+enviesDisponiblesParRegion['auvergne'] = enviesDisponiblesParRegion['auvergne'].concat(["sport"]);
+enviesDisponiblesParRegion['bretagne'] = enviesDisponiblesParRegion['bretagne'].concat(["culture"]);
+enviesDisponiblesParRegion['centre'] = enviesDisponiblesParRegion['centre'].concat(["culture"]);
+enviesDisponiblesParRegion['grandest'] = enviesDisponiblesParRegion['grandest'].concat(["culture"]);
+enviesDisponiblesParRegion['idf'] = enviesDisponiblesParRegion['idf'].concat(["culture"]);
+enviesDisponiblesParRegion['bourgogne'] = enviesDisponiblesParRegion['bourgogne'].concat(["eco"]);
+enviesDisponiblesParRegion['idf'] = enviesDisponiblesParRegion['idf'].concat(["eco"]);
+enviesDisponiblesParRegion['normandie'] = enviesDisponiblesParRegion['normandie'].concat(["eco"]);
+enviesDisponiblesParRegion['loire'] = enviesDisponiblesParRegion['loire'].concat(["eco"]);
+enviesDisponiblesParRegion['centre'] = enviesDisponiblesParRegion['centre'].concat(["harmonie"]);
+enviesDisponiblesParRegion['grandest'] = enviesDisponiblesParRegion['grandest'].concat(["harmonie"]);
+enviesDisponiblesParRegion['loire'] = enviesDisponiblesParRegion['loire'].concat(["harmonie"]);
+enviesDisponiblesParRegion['corse'] = enviesDisponiblesParRegion['corse'].concat(["plage"]);
+enviesDisponiblesParRegion['paca'] = enviesDisponiblesParRegion['paca'].concat(["plage"]);

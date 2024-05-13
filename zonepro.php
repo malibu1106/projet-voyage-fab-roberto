@@ -128,7 +128,7 @@
                         <?php
                         echo '<option value="label" selected disabled>Sélectionner avantage 1</option>';
                         foreach (glob("img/avantages-voyage/*.png") as $filename) {
-                            echo '<option value="' . $filename . '">' . $filename . 'required </option>';
+                            echo '<option value="' . $filename . '" required>' . $filename . '</option>';
                         }
                         ?>
                     </select>
@@ -136,7 +136,7 @@
                         <?php
                         echo '<option value="label" selected disabled>Sélectionner avantage 2</option>';
                         foreach (glob("img/avantages-voyage/*.png") as $filename) {
-                            echo '<option value="' . $filename . '">' . $filename . 'required </option>';
+                            echo '<option value="' . $filename . '" required>' . $filename . '</option>';
                         }
                         ?>
                     </select>
@@ -144,7 +144,7 @@
                         <?php
                         echo '<option value="label" selected disabled>Sélectionner avantage 3</option>';
                         foreach (glob("img/avantages-voyage/*.png") as $filename) {
-                            echo '<option value="' . $filename . '">' . $filename . 'required </option>';
+                            echo '<option value="' . $filename . '" required>' . $filename . '</option>';
                         }
                         ?>
                     </select>

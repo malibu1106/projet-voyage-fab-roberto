@@ -11,11 +11,22 @@ PB rencontrés :
     Sûrement une meilleure solution obv.
 - AJOUT FIXED, NEED REMOVE SI VOYAGE DELETED
 
-TODO :
 
-    NEED REMOVE SI VOYAGE DELETED
+DONE : 
+
     Afficher tous les voyages avec un foreach / catégories
+    Remplir les pages de voyage
+
+
+
+TODO :    
+
+
     Affichage d'une recherche à transfo en foreach aussi, au cas où 2 envies == dans même région, ou l'inverse.
+
+    NEED REMOVE SEARCH JS SI VOYAGE DELETED
+
+    Remplacer les photos de mauvaise qualité
     Ajouter des icones RS dans le footer
     Enhance CSS for gallery
 

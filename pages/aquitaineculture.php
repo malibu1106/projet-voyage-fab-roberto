@@ -42,13 +42,13 @@
             <div class="conteneur-detail-voyage-reservation-image"><img src="img/voyages/Domaine Aubazen.jpg"></div>
             <div class="conteneur-detail-voyage-avantages-infos">
                 <div class="conteneur-detail-voyage-avantages">
-                    <div class="detail-voyage-avantage"><img src="img/avantages-voyage/sauna.png">
+                    <div class="detail-voyage-avantage"><img src="img/avantages-voyage/Sauna.png">
                         <div class="voyage-titre-avantage">Sauna</div>
                     </div>
-                    <div class="detail-voyage-avantage"><img src="img/avantages-voyage/bassin.png">
+                    <div class="detail-voyage-avantage"><img src="img/avantages-voyage/Piscine.png">
                         <div class="voyage-titre-avantage">Piscine</div>
                     </div>
-                    <div class="detail-voyage-avantage"><img src="img/avantages-voyage/serveur.png">
+                    <div class="detail-voyage-avantage"><img src="img/avantages-voyage/Restaurant.png">
                         <div class="voyage-titre-avantage">Restaurant</div>
                     </div>
                 </div>

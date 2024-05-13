@@ -761,6 +761,7 @@ section.detail-voyage {
   border-radius: 10px;
 }
 
+
 .conteneur-detail-voyage {
   max-width: 1200px;
   margin: auto;
@@ -1350,6 +1351,8 @@ footer {
 
 @media only screen and (min-width: 1024px) {
 
+
+
   footer {
     flex-direction: row;
     justify-content: space-evenly;
@@ -1365,7 +1368,6 @@ footer {
   }
 
   .conteneur-detail-voyage-prez-img {
-    /* border: solid green 2px; */
     width: 49%;
     display: flex;
     align-items: center;
