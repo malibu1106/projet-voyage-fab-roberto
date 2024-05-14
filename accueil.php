@@ -48,7 +48,7 @@
                     </select>
                 </div>
                 <div id="close-icon">
-                    <a id="researchLink" href="#"><img id="search-mobile-icon" src="img/search.png"></a><img id="close-search-mobile-icon" src="img/close-research.png">
+                    <a id="researchLink" href="#"><img id="search-mobile-icon" src="img/ok_black.svg"></a><img id="close-search-mobile-icon" src="img/cross_black.svg">
                 </div>
 
             </div>
@@ -163,7 +163,7 @@
                     <figcaption>
 
                         <p class="titre-avis">Très déçu !!</p>
-                        <p class="texte-avis">La bouffe était bonne mais y'avait pas une seule vielle à pécho</p>
+                        <p class="texte-avis">La bouffe était bonne mais y'avait pas une seule vielle à pécho.<br><br>Liberté Égalité Fiscalité !</p>
                         <span class="note-avis"><img src="img/avis/star.png"></span>
                         <span class="nom-avis">Macrotte mon petit pote</span>
 

@@ -31,16 +31,31 @@ function showOrHideBurgerMenu() {
 // LOGIN ZONE
 
 function showOrHideLoginZone() {
-    if (document.getElementById('zone-login').style.display == "block") {
-        document.getElementById('zone-login').style.display = "none";
-    }
-    else { document.getElementById('zone-login').style.display = "block" }
+    if (loggedIn === false) {
+        if (document.getElementById('zone-login').style.display == "block") {
+            document.getElementById('zone-login').style.display = "none";
+        }
+        else { document.getElementById('zone-login').style.display = "block" }
 
-    if (menuBurger.classList == "menu-petit-visible") {
-        menuBurger.classList.replace("menu-petit-visible", "menu-petit-cache");
-        iconeMenuBurger.style.transform = "rotate(0deg)";
+        if (menuBurger.classList == "menu-petit-visible") {
+            menuBurger.classList.replace("menu-petit-visible", "menu-petit-cache");
+            iconeMenuBurger.style.transform = "rotate(0deg)";
+        }
     }
 }
+let loggedIn = false;
+function login() {
+
+    if (loggedIn === false) {
+        loggedIn = true;
+        let pseudoZone = document.getElementById('btn-login');
+        let pseudo = document.getElementById('pseudologin').value;
+        pseudoZone.innerHTML = "Bonjour " + pseudo + " !";
+        document.getElementById('zone-login').style.display = "none";
+    }
+}
+
+
 
 // PRO ZONE
 

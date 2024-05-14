@@ -1,6 +1,6 @@
 <section class="detail-voyage">
     <div class="conteneur-detail-voyage">
-        <h2 class="titre-voyage">Aquitaine</h2>
+        <h2 class="titre-voyage">Nouvelle-Aquitaine</h2>
         <h3 class="sous-titre-voyage">Vibrations culturelles</h3>
         <div class="conteneur-detail-voyage-prez">
             <div class="conteneur-detail-voyage-prez-img"><img src="img/voyages/porto-vecchio-corse.jpg">

@@ -110,8 +110,8 @@ section {
 
 .titre-section {
   color: white;
-  font-family: "Roboto";
-  font-size: 2.5em;
+  font-family: "Montserrat";
+  font-size: 3.1em;
   line-height: 1.5em;
 }
 
@@ -128,7 +128,7 @@ section {
 #zone-login {
   width: 100vw;
   height: calc(100vh - 100px);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 100px;
   z-index: 100;
@@ -139,6 +139,7 @@ section {
   width: 400px;
   height: auto;
   position: absolute;
+  font-family: 'Lato';
   top: 0;
   left: 0;
   right: 0;
@@ -160,7 +161,7 @@ section {
 .login-form input:hover {
   scale: 1.05;
   transition: 0.2s;
-  box-shadow: 1px 1px 2px 1px #0088b6;
+  box-shadow: 1px 1px 2px 1px #658214;
 }
 
 #btn-login,
@@ -169,8 +170,15 @@ section {
   cursor: pointer;
 }
 
+#conteneur-btn-login {
+  display: flex;
+  width: 150px;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
 #zone-login img {
-  width: 50px;
+  width: 40px;
   margin: auto;
   z-index: 500;
 }
@@ -264,7 +272,7 @@ section {
 #zone-pro form input:hover {
   scale: 1.05;
   transition: 0.2s;
-  box-shadow: 1px 1px 2px 1px #0088b6;
+  box-shadow: 1px 1px 2px 1px #658214;
 }
 
 #btn-zone-pro,
@@ -289,14 +297,11 @@ section {
 }
 
 
-
-
-
 /*ACCUEIL Max480px */
 .accueil {
   width: 100vw;
   height: 754px;
-  border: solid gray 1px;
+  border-top: solid 1px gray;
   position: relative;
 }
 
@@ -308,8 +313,7 @@ section {
   font-size: 2.6em;
   color: white;
   text-transform: uppercase;
-  font-family: Roboto;
-  font-weight: 400;
+  font-family: "Montserrat";
   text-align: center;
   width: 80%;
   margin: 30vh auto 0;
@@ -393,7 +397,7 @@ section {
 
 #close-icon {
   display: flex;
-  width: 100px;
+  width: 150px;
   height: 50px;
   margin: 15px auto 0;
   align-items: center;
@@ -401,7 +405,7 @@ section {
 }
 
 #close-icon img {
-  width: 30px;
+  width: 40px;
   cursor: pointer;
 }
 
@@ -423,7 +427,8 @@ section {
 /*SECTION PROMOS*/
 .section-promos {
   font-family: "Open Sans";
-  background: rgba(235, 233, 233, 1);
+  background: white;
+
 }
 
 .section-promos article {
@@ -431,17 +436,16 @@ section {
 }
 
 .conteneur-promo {
-  width: 90%;
+  width: 95%;
   max-width: 500px;
   margin: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 15px;
   display: flex;
   flex-direction: column;
   gap: 25px;
   justify-content: center;
-
-
+  background: rgba(235, 233, 233, 1);
+  border-radius: 10px;
 }
 
 article.promo {
@@ -480,9 +484,6 @@ article.promo::before {
 
 
 
-
-
-
 .section-promos figure {
   display: flex;
   flex-direction: row;
@@ -516,7 +517,7 @@ article.promo::before {
   top: 20%;
   font-size: 1.4em;
   font-family: "Roboto";
-  color: #0088b6;
+  color: #658214;
 }
 
 .sous-titre-promo {
@@ -552,7 +553,7 @@ figure .pourcent-promo {
   position: absolute;
   top: 0;
   right: 0;
-  color: red;
+  color: white;
   font-size: 1.35em;
   font-family: 'Roboto';
   font-weight: 600;
@@ -570,10 +571,10 @@ figure .pourcent-promo {
   background: url("img/regions/auvergne.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  max-width: calc(1.77*70vh);
+  max-width: calc(1.77*80vh);
   transition: 1s;
   position: relative;
-  height: 70vh;
+  height: 80vh;
   width: 95vw;
   margin: auto;
   border-radius: 10px;
@@ -627,7 +628,7 @@ figure .pourcent-promo {
   position: absolute;
   bottom: 5px;
   left: 5px;
-  opacity: 0.7;
+  opacity: 0.85;
   height: 90%;
 }
 
@@ -641,7 +642,6 @@ p {
 }
 
 #section-regions h3 {
-  /* background: rgba(0, 0, 0, 0.5); */
   background: linear-gradient(360deg, rgba(255, 255, 255, 0) 5%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.8) 65%, rgba(0, 0, 0, 1) 100%);
   font-size: 1.8em;
   text-align: center;
@@ -669,14 +669,14 @@ p {
 
 /* ENVIES */
 .section-voyages {
-  background: rgba(235, 233, 233, 1);
+  background: white;
   padding: 25px 0px;
   height: auto;
 }
 
 .section-voyages h3 {
   font-size: 2.3em;
-  color: #0088b6;
+  color: #658214;
   text-align: center;
   margin: auto;
   font-family: "Lato";
@@ -685,6 +685,9 @@ p {
 .conteneur-voyages {
   display: flex;
   width: 95%;
+  border-radius: 10px;
+  background: rgba(235, 233, 233, 1);
+  padding-bottom: 3vh;
   flex-direction: column;
   margin: auto;
 }
@@ -694,7 +697,7 @@ p {
   flex-direction: column;
   position: relative;
   margin: auto;
-
+  font-family: "Questrial";
 }
 
 hr {
@@ -743,7 +746,7 @@ hr {
 
 .conteneur-titre-voyage h4 {
   font-size: 1.65em;
-  color: #0088b6;
+  color: #91a931;
 }
 
 .conteneur-titre-voyage h5 {
@@ -783,15 +786,15 @@ section.detail-voyage {
 }
 
 section.detail-voyage h2 {
-  font-size: 1.6em;
+  font-size: 2.2em;
   font-family: 'Roboto';
   font-weight: 600;
-  color: #0088b6;
+  color: #658214;
   margin: 0 auto 10px;
 }
 
 section.detail-voyage h3 {
-  font-size: 1.4em;
+  font-size: 1.9em;
   font-family: 'Lato';
   font-weight: 400;
   color: black;
@@ -818,7 +821,7 @@ section.detail-voyage h5 {
 
 .conteneur-detail-voyage p {
   padding: 5px;
-  color: #0088b6;
+  color: #658214;
 }
 
 .conteneur-detail-voyage-texte {
@@ -849,11 +852,11 @@ section.detail-voyage h5 {
   width: 60%;
   font-family: 'Lato';
 
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .detail-voyage-avantage img {
-  width: 50px;
+  width: 70px;
 
 }
 
@@ -893,56 +896,6 @@ section.detail-voyage h5 {
 }
 
 
-/***** DEBUT CSS FAB **********/
-/***** DEBUT CSS FAB **********/
-/***** DEBUT CSS FAB **********/
-/***** DEBUT CSS FAB **********/
-
-
-
-
-/* .titre-voyage-details {
-  font-size: 90px;
-  text-align: center;
-  border: 2px solid blue;
-}
-
-.conteneur-photo {
-  height: 800px;
-
-}
-
-.conteneur-photo article {
-  height: auto;
-
-}
-
-.conteneur-photo figure {
-  display: flex;
-  flex-direction: row;
-  justify-content: center
-}
-
-.conteneur-figcaption {
-
-  height: 600px;
-  width: 400px;
-  padding: 30px;
-
-  background-color: orange;
-}
-
-.photo-voyage {
-  margin-top: 30px;
-  margin-bottom: 30px;
-} */
-
-
-/***** FIN CSS FAB **********/
-/***** FIN CSS FAB **********/
-/***** FIN CSS FAB **********/
-/***** FIN CSS FAB **********/
-/***** FIN CSS FAB **********/
 
 
 
@@ -984,11 +937,14 @@ article.avis {
 
 .avis figcaption .titre-avis,
 .texte-avis {
-  color: #0088b6;
+
+  font-family: "Questrial";
 }
 
 .avis figcaption .titre-avis {
   font-size: 1.5em;
+  color: rgb(92, 91, 91);
+
   font-weight: 800;
   padding: 5px;
 }
@@ -998,10 +954,11 @@ article.avis {
   line-height: 1em;
   padding: 10px;
   position: absolute;
+  color: lightslategray;
   left: 0;
   right: 0;
-  bottom: 50px;
-  font-weight: 600;
+  top: 30px;
+  font-weight: 400;
 }
 
 .avis .note-avis {
@@ -1016,6 +973,7 @@ article.avis {
 
 .avis .nom-avis {
   position: absolute;
+  font-family: "Roboto";
   bottom: 35px;
   font-style: italic;
   left: 0;
@@ -1041,6 +999,7 @@ section.contact {
 .conteneur-contact {
   width: 95%;
   max-width: 900px;
+  font-family: "Roboto";
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1076,7 +1035,7 @@ textarea:hover,
 select:hover {
   scale: 1.05;
   transition: 0.2s;
-  box-shadow: 1px 1px 2px 1px #0088b6;
+  box-shadow: 1px 1px 2px 1px #658214;
 }
 
 input[type=submit] {
@@ -1116,7 +1075,7 @@ input[type=submit] {
 }
 
 .conteneur-contact-droite p {
-  color: #0088b6;
+  color: #658214;
   padding: 10px;
 }
 
@@ -1157,7 +1116,7 @@ input[type=submit] {
 
 header {
   /* background: rgb(255, 255, 255); */
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 100%);
   width: 100%;
   height: 100px;
   position: sticky;
@@ -1186,6 +1145,7 @@ header {
   background-size: cover;
   border: solid white 1px;
   margin: auto;
+  cursor: pointer;
 }
 
 #langage-burger {
@@ -1194,7 +1154,7 @@ header {
 
 
 #menu-petit {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   padding: 16px;
   display: none;
 }
@@ -1226,6 +1186,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  font-family: "Pacifico";
 }
 
 .logo img {
@@ -1234,7 +1195,7 @@ header {
 
 header h1 {
   font-size: 2em;
-  margin-left: 25px;
+  margin-left: ;
 }
 
 header ul {
@@ -1256,7 +1217,7 @@ footer {
   width: 100%;
   height: auto;
   background: white;
-  font-family: "Roboto";
+  font-family: "Questrial";
 }
 
 #conteneur-footer {
@@ -1359,7 +1320,7 @@ footer {
 
   .conteneur-promo {
 
-    max-width: 1400px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1374,7 +1335,7 @@ footer {
   /* VOYAGES */
   .conteneur-voyages {
     width: 95%;
-    max-width: 1500px;
+    max-width: 1000px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
@@ -1383,6 +1344,7 @@ footer {
   .type-voyage {
     align-items: flex-start;
     margin-top: 20px;
+
 
   }
 
@@ -1415,13 +1377,6 @@ footer {
   .prez-region img {
     left: 5%;
   }
-
-
-
-
-
-
-
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1439,6 +1394,12 @@ footer {
     gap: 50px;
   }
 
+  /*PROMO*/
+  .conteneur-promo {
+    max-width: 1200px;
+  }
+
+
   /*REGION*/
 
   #section-regions p {
@@ -1449,7 +1410,8 @@ footer {
   }
 
   .prez-region img {
-    left: 5%;
+    left: 10%;
+    height: 100%;
   }
 
 

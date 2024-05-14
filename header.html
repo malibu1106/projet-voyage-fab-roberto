@@ -27,7 +27,7 @@
             <li><a href="#ancre-contact">Contact</a></li>
 
             <li id="langage-burger"></li><br>
-            <img onclick="showOrHideBurgerMenu()" src="img/close-research.png">
+            <img onclick="showOrHideBurgerMenu()" src="img/cross.svg">
 
         </ul>
     </nav>
@@ -36,11 +36,14 @@
 <div id="zone-login">
     <div class="login-form">
         <form action="#" method="post">
-            <input placeholder="Adresse email" type="emaillogin" id="emaillogin" name="emaillogin" required>
+            <input placeholder="Votre pseudo" type="text" id="pseudologin" name="pseudologin" required>
             <input placeholder="Mot de passe" type="password" id="password" name="password" required>
 
-            <input type="submit" value="Se connecter">
-            <img id="close-login-logo" onclick="showOrHideLoginZone()" src="img/close-research.png">
+            <div id="conteneur-btn-login">
+
+                <img id="seConnecter" src="img/ok.svg" onclick="login()">
+                <img id="close-login-logo" onclick="showOrHideLoginZone()" src="img/cross.svg">
+            </div>
         </form>
 
     </div>
