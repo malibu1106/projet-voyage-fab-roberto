@@ -1,10 +1,10 @@
 <?php
 echo '<div class="type-voyage">
-<hr>
+
 <a href="index.php?envie=sommets">
     <h3 class="titre-type-voyages">Atteignez des sommets</h3>
 </a>
-<hr>';
+';
 // Chercher tous les fichiers qui contiennent le mot "plage" dans leur nom
 foreach (glob("pages/*sommets*.php") as $filename) {
     // Charger le contenu de chaque fichier
