@@ -1,6 +1,6 @@
 <video id="background-video" autoplay loop muted>
 
-    <source src="bg2.mp4" type="video/mp4">
+    <source src="bg2.mov" type="video/mp4">
 
 </video>
 
@@ -9,7 +9,7 @@
         <h1>évadez-vous, découvrez, vivez.</h1>
         <div id="recherche-voyage-mobile" class="recherche-voyage-mobile-fermee">
             <div id="recherche-cachee">
-                <div id="close-icon"><img id="close-search-mobile-icon" src="img/close-research.png"></div>
+
                 <div class="conteneur-select-mobile">
                     <label for="regions">Régions</label>
                     <select id="regions" name="regions">
@@ -47,7 +47,10 @@
                         <option class="researchOption" value="eco">Voyages Écoresponsables</option>
                     </select>
                 </div>
-                <a id="researchLink" href="#"><img id="search-mobile-icon" src="img/search.png"></a>
+                <div id="close-icon">
+                    <a id="researchLink" href="#"><img id="search-mobile-icon" src="img/search.png"></a><img id="close-search-mobile-icon" src="img/close-research.png">
+                </div>
+
             </div>
 
             <div id="trouver-mon-voyage">Trouver mon voyage</div>
@@ -104,13 +107,15 @@
 
             <button id="nextRegion" onclick="nextRegion()">&#10095;</button>
 
-            <div class="prez-region"><img id="carte-region-img" src="img/regions/cartefr/carte-auvergne.png">
+            <div class="prez-region">
 
                 <div class="conteneur-infos-region">
 
                     <p id="texte-region">Laissez-vous séduire par la beauté brute des volcans endormis et des vastes étendues
                         verdoyantes de l'Auvergne, une région où la nature règne en maître.</p>
                 </div>
+                <img id="carte-region-img" src="img/regions/cartefr/carte-auvergne.png">
+
             </div>
 
         </div>

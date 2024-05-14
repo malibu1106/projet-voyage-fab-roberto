@@ -16,6 +16,8 @@ DONE :
 
     Afficher tous les voyages avec un foreach / catégories
     Remplir les pages de voyage
+    Ajouter des icones RS dans le footer
+    Enhance CSS for gallery
 
 
 
@@ -27,8 +29,7 @@ TODO :
     NEED REMOVE SEARCH JS SI VOYAGE DELETED
 
     Remplacer les photos de mauvaise qualité
-    Ajouter des icones RS dans le footer
-    Enhance CSS for gallery
+    
 
 WHYNOT : 
 
