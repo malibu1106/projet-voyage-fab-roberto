@@ -314,7 +314,7 @@ section {
 .accueil {
   width: 100vw;
   height: calc(100vh - 100px);
-  border-top: solid 1px #afc2cd;
+  border-top: solid 1px rgb(59, 57, 57);
   position: relative;
 }
 
@@ -793,7 +793,7 @@ section.detail-voyage {
   position: relative;
   width: 95%;
   max-width: 1500px;
-  margin: 20px auto;
+  margin: 40px auto;
   background: white;
   text-align: center;
   padding: 30px 5px;
@@ -831,6 +831,15 @@ section.detail-voyage h5 {
   margin-top: 22px;
   margin-bottom: 12px;
   text-align: left;
+}
+
+.conteneur-detail-voyage-reservation-infos button {
+  background-color: #658214 !important;
+  padding: 15px 30px !important;
+}
+
+.conteneur-detail-voyage-reservation-infos button:hover {
+  scale: 1.05;
 }
 
 .detail-voyage-lieu-texte,
@@ -902,7 +911,7 @@ section.detail-voyage h5 {
   position: absolute;
   bottom: 0;
   right: 10px;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 600;
 
 }
@@ -1357,7 +1366,8 @@ footer {
   /* VOYAGES */
   .conteneur-voyages {
     width: 95%;
-    max-width: 1000px;
+    max-width: 1200px;
+    padding: 50px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;

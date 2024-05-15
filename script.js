@@ -1,3 +1,15 @@
+// ON SCROLL BORDER
+window.onscroll = function () {
+    // Vérifie si l'utilisateur a fait défiler au moins 1 pixel vers le bas
+    if (window.scrollY > 0) {
+        // Si oui, affichez votre contenu ici
+        document.getElementsByTagName('header')[0].style.borderBottom = "solid rgb(59, 57, 57) 1px";
+    } else {
+        // Sinon, cachez le contenu si nécessaire
+        document.getElementsByTagName('header')[0].style.borderBottom = "none";
+    }
+};
+
 // MENU BURGER
 let iconeMenuBurger = document.getElementById('burger-button');
 iconeMenuBurger.addEventListener("click", showOrHideBurgerMenu);
