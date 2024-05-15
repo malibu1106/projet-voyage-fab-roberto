@@ -2,7 +2,7 @@
 echo '<div class="type-voyage">
 
 <a href="index.php?envie=sentiers">
-    <h3 class="titre-type-voyages">Sentiers Intrépides</h3>
+    <h3 class="titre-type-voyages">Sentier Intrépide</h3>
 </a>
 ';
 // Chercher tous les fichiers qui contiennent le mot "plage" dans leur nom

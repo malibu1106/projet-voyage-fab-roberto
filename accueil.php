@@ -6,7 +6,7 @@
 
 <main>
     <section class="accueil">
-        <h1>évadez-vous, découvrez, vivez.</h1>
+        <h1><a href="#ancre-évadez">évadez-vous,</a> <a href="#ancre-découvrez">découvrez,</a> <a href="#ancre-voyages">vivez.</a></h1>
         <div id="recherche-voyage-mobile" class="recherche-voyage-mobile-fermee">
             <div id="recherche-cachee">
 
@@ -58,8 +58,9 @@
     </section>
     <div class="cut-blanc"></div>
 
-
+    <div id="ancre-évadez"></div>
     <div class="cut-transp">
+
         <h2 class="titre-section">Évadez-vous,</h2>
         <h4 class="texte-section">Evadez-vous dans l'élégance intemporelle de la France, où la beauté des villes lumière
             se mêle au charme paisible des villages pittoresques.</h4>
@@ -81,7 +82,9 @@
 
 
     <!--REGIONS-->
+    <div id="ancre-découvrez"></div>
     <div class="cut-transp">
+
         <h2 class="titre-section">Découvrez,</h2>
         <h4 class="texte-section">Découvrez les trésors cachés de France, où chaque panorama dévoile un tableau vivant
             d'histoire, de culture et de beauté naturelle à couper le souffle.</h4>
@@ -159,13 +162,13 @@
         <div class="conteneur-avis">
             <article class="avis">
                 <figure>
-                    <img title="Photo d'Emmanuel Macron" src="img/avis/manu.jpg" alt="Photo d'Emmanuel Macron" />
+                    <img title="Photo de Manu" src="img/avis/manu.jpg" alt="Photo de Manu" />
                     <figcaption>
 
-                        <p class="titre-avis">Très déçu !!</p>
-                        <p class="texte-avis">La bouffe était bonne mais y'avait pas une seule vielle à pécho.<br><br>Liberté Égalité Fiscalité !</p>
-                        <span class="note-avis"><img src="img/avis/star.png"></span>
-                        <span class="nom-avis">Macrotte mon petit pote</span>
+                        <p class="titre-avis">Super voyage !</p>
+                        <p class="texte-avis">C'était vraiment un super voyage, j'ai bien profité de nos somptueux paysages<br><br>Merci Bleu Blanc Bouge !!</p>
+                        <span class="note-avis"><img src="img/avis/star.png"><img src="img/avis/star.png"><img src="img/avis/star.png"><img src="img/avis/star.png"></span>
+                        <span class="nom-avis">Manu</span>
 
                     </figcaption>
                 </figure>
@@ -178,7 +181,7 @@
                         <p class="texte-avis">Tout était parfait! La réservation, l'organisation du voyage, l'hôtel .. merveilleux !
                             Merci beaucoup, je recommande !</p>
                         <span class="note-avis"><img src="img/avis/star.png"><img src="img/avis/star.png"><img src="img/avis/star.png"><img src="img/avis/star.png"><img src="img/avis/star.png"></span>
-                        <span class="nom-avis">Jean Luc le grand duc</span>
+                        <span class="nom-avis">Jean-Luc</span>
                     </figcaption>
                 </figure>
             </article>
@@ -187,10 +190,9 @@
                     <img title="Photo de Brigitte Macron" src="img/avis/brigitte.jpg" alt="Photo de Brigitte Macron" />
                     <figcaption>
                         <p class="titre-avis">Peut mieux faire</p>
-                        <p class="texte-avis">C'était pas si mal pour un voyage aux frais du contribuable, même si la vaisselle
-                            était pas très jolie ..</p>
+                        <p class="texte-avis">Bon voyage dans l'ensemble, mais un peu déçu, problème de chambre dans mon hôtel ..</p>
                         <span class="note-avis"><img src="img/avis/star.png"><img src="img/avis/star.png"><img src="img/avis/star.png"></span>
-                        <span class="nom-avis">Braguette la kekette</span>
+                        <span class="nom-avis">Léa</span>
                     </figcaption>
                 </figure>
             </article>

@@ -3,7 +3,7 @@
         <div class="zone-pro-remove">
 
             <form action="index.php?action=retirervoyage" method="post" enctype="multipart/form-data">
-                <hr>
+                <br>
                 <h2 class="titre-zone-pro">Retirer un voyage</h2>
                 <hr>
                 <select name="filename">

@@ -2,7 +2,7 @@
 echo '<div class="type-voyage">
 
 <a href="index.php?envie=culture">
-    <h3 class="titre-type-voyages">Vibrations Culturelles</h3>
+    <h3 class="titre-type-voyages">Vibration Culturelle</h3>
 </a>
 ';
 // Chercher tous les fichiers qui contiennent le mot "plage" dans leur nom

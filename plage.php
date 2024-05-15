@@ -2,7 +2,7 @@
 echo '<div class="type-voyage">
 
 <a href="index.php?envie=plage">
-    <h3 class="titre-type-voyages">Plâges de rêve</h3>
+    <h3 class="titre-type-voyages">Plage de rêve</h3>
 </a>
 ';
 // Chercher tous les fichiers qui contiennent le mot "plage" dans leur nom

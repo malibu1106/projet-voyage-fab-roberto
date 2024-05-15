@@ -23,11 +23,11 @@
     <nav id="menu-petit" class="menu-petit-cache" style="display: none;">
         <ul>
             <li><span onclick="showOrHideLoginZone()" id="btn-login-petit">Connexion</span></li>
-            <li><a href="#ancre-voyages">Nos voyages</a></li>
-            <li><a href="#ancre-contact">Contact</a></li>
+            <li><a href="#ancre-voyages"><span onclick="showOrHideBurgerMenu()">Nos voyages</span></a></li>
+            <li><a href="#ancre-contact"><span onclick="showOrHideBurgerMenu()">Contact</span></a></li>
 
             <li id="langage-burger"></li><br>
-            <img onclick="showOrHideBurgerMenu()" src="img/cross.svg">
+            <img onclick="showOrHideBurgerMenu()" src="img/cross_black.svg">
 
         </ul>
     </nav>
@@ -41,8 +41,8 @@
 
             <div id="conteneur-btn-login">
 
-                <img id="seConnecter" src="img/ok.svg" onclick="login()">
-                <img id="close-login-logo" onclick="showOrHideLoginZone()" src="img/cross.svg">
+                <img id="seConnecter" src="img/ok_black.svg" onclick="login()">
+                <img id="close-login-logo" onclick="showOrHideLoginZone()" src="img/cross_black.svg">
             </div>
         </form>
 

@@ -28,15 +28,10 @@ DONE :
 
 TODO :  
     CLEAN CSS
-
     A faire à la maison :
     Affichage d'une recherche à transfo en foreach aussi, au cas où 2 envies == dans même région, ou l'inverse.
     NEED REMOVE SEARCH JS SI VOYAGE DELETED
     
-
-WHYNOT : 
-
-    Possibilité de mettre un voyage déjà existant en promo
     
 
 
