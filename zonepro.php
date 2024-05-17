@@ -173,7 +173,7 @@
                     <label for="prixNuitParPers">Prix nuit par personne:</label><br>
                     <input class="inputpetit" type="number" name="prixNuitParPers" id="prixNuitParPers" required><br>
 
-                    <label for="promoCheckbox">Mettre en promotion</label>
+                    <label for="promoCheckbox">Mettre en promotion</label><br>
                     <input type="checkbox" id="promoCheckbox" name="promoCheckbox">
 
 

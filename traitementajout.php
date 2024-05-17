@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (isset($_POST['para4']) && isset($_POST['para4'])) {
-        $nompara4 = $_POST['para4'];
+        $nompara4 = $_POST['nompara4'];
         $para4 = $_POST['para4'];
     } else {
         $nompara4 = "";
